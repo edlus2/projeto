@@ -7,6 +7,7 @@
 
     section#login{
         width: 90vw;
+        height: 300px;
     }
     section#login > div#imagem{
         background-image: url(../img/tablet.jpg);
@@ -29,6 +30,7 @@
 
     section#login{
         width: 950px;
+        height: 400px;
     }   
     section#login > div#imagem{
         background-image: url(../img/desktop.jpg);
@@ -46,5 +48,6 @@
     
     div#formulario>p{
         font-size: 1.2em;
+        margin: 20px 0px;
     }
 }
