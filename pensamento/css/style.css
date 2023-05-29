@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html , body{
+    background-color: #042326;
+    min-height: 100%;
+}
+body header{
+    height: 10hw;
+    text-align: center;
+    background-color: #042326;
+    color: #107361;
+    padding-bottom: 20px;
+}
+header h1{
+    padding-top: 20px;
+    font: normal bold 3vw arial, sans-serif;
+}
+header h2{
+    padding-bottom: 20px;
+    font: normal bold 2vw arial, sans-serif;
+}
+header a{
+    color:#0F5959 ;
+    text-decoration: none;
+    font: normal bold 2vw arial, sans-serif;
+}
+
+select{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    line-height: 2em;
+    padding-left: 30px;
+    font-size: 3.5vw;
+}
+section .primaria{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-image: url(../img/barco.jpg);
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: cover;
+}
+section .primaria div{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 600px;
+    height: 500px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+section .primaria div p{
+    font: normal bold 3vw arial, sans-serif;
+    color: white;
+}
+
+section article{
+    width: 100%;
+    height: 100%;
+    padding: 50px 0px;
+    background-color: #042326;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+section article div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 600px;
+    height: 500px;
+}
+section article div img{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+section article .conteudo{
+    background-image: url(../img/fundo.jpg);
+    background-attachment: fixed;
+    background-size: contain;
+    border: 1px solid #0F5959;
+    border-radius: 10px;
+    font: normal bold 2vw arial, sans-serif;
+    color: white;
+}
+
+.batata{
+    background-color: #107361;
+}
+
+section .semefinal{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-image: url(../img/animal.jpg);
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: cover;
+}
+section .semefinal div{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 600px;
+    height: 500px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+section .semefinal div p{
+    font: normal bold 3vw arial, sans-serif;
+    color: white;
+}
+
+.rato{
+    background-color: #1D7373;
+}
+
+section .final{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-image: url(../img/casa.jpg);
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: cover;
+}
+section .final div{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 600px;
+    height: 500px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+section .final div p{
+    font: normal bold 3vw arial, sans-serif;
+    color: white;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    font: normal bold 3vw arial, sans-serif;
+}
