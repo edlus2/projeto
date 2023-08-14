@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+}
+header{
+    box-shadow: 1px -15px 20px 20px black;
+    height: 100vh;
+}
+header > img{
+    width: 100px;
+}
+header div > video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -100;
+    height: 100%;
+    width: 100%;
+}
+header h1{
+    text-align: center;
+    font-size: 5em;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+}
+.meuicone{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.meuicone img{
+    width: 400px;
+}
+#cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+#cont a {
+    text-decoration: none;
+}
+.conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 400px;
+    margin: 50px;
+    color: black;  
+    border-radius: 10px; 
+}
+.conteiner p{
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+.conteiner div{
+    height: 300px;
+    width: 100%;
+}
+.conteiner div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.conteiner h2{
+    text-align: center;
+    width: 100%;
+}
+footer{
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid black;
+}

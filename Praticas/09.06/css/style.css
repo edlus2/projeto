@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "terro";
+    src: url(../font/Aligator.otf);
+}
+@font-face {
+    font-family: "bronk";
+    src: url(../font/Broken\ Knight\ DEMO.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    background-attachment: fixed;
+    background-image: url(../img/Slitterhead.jpg);
+    background-size: cover;
+    background-position: center bottom;
+}
+header{
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+}
+header .titulo{
+    font-size: 2em;
+    font-family: "terro", sans-serif;
+}
+header .nav{
+    display: flex;
+}
+header .nav > nav{
+    cursor: pointer;
+    font-family: "bronk", sans-serif;
+    font-size: 2em;
+    padding: 20px 10px;
+    text-decoration: rgba(255, 0, 0, 0.541);
+}
+header .nav > nav:hover{
+    text-decoration: underline red;
+    transition: 1s;
+}
+
+header .compra{
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.300);
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: "bronk", sans-serif;
+    font-size: 2em;
+    margin: 10px 10px;
+    padding: 15px 10px 0px 10px;
+}
+header .compra:hover{
+    background-color: red;
+    transition: 1s;
+    box-shadow: 0px 0px 0px 10px rgba(255, 0, 0, 0.300);
+}
+.informaçao{
+    width: 430px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+.informaçao h2{
+    font-size: 4em;
+    font-family: "terro", sans-serif;
+}
+.informaçao .part{
+    display: flex;
+    justify-content: space-around;
+}
+.part h3{
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: rgba(255, 0, 0, 0.700);
+    font-family: "bronk", sans-serif;
+}
+.part h3:hover{
+    background-color: red;
+    transition: 1s;
+}
+
+.logo{
+    position: absolute;
+    width: 100px;
+    top: -1%;
+}
