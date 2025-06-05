@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador 3D Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Visualizador 3D Interativo</h1>
+        <p>Carregue seus próprios modelos GLB/GLTF ou explore os exemplos abaixo.</p>
+    </header>
+
+    <main>
+        <div id="three-scene-container"></div>
+
+        <div class="upload-section">
+            <label for="file-input" class="upload-button">
+                Escolher Arquivo 3D (.glb ou .gltf)
+            </label>
+            <input type="file" id="file-input" accept=".glb, .gltf" style="display: none;">
+            <span id="file-name">Nenhum arquivo selecionado</span>
+        </div>
+
+        <section class="info-section">
+            <h2>Como Usar</h2>
+            <p>Este visualizador permite que você explore modelos 3D diretamente no seu navegador. Siga os passos:</p>
+            <ol>
+                <li>Clique no botão **"Escolher Arquivo 3D"** acima.</li>
+                <li>Selecione um arquivo de modelo 3D no formato **.glb** ou **.gltf** do seu computador.</li>
+                <li>O modelo será carregado automaticamente na área 3D.</li>
+                <li>Use o **mouse** para interagir:
+                    <ul>
+                        <li>**Clique e arraste:** Para girar o modelo.</li>
+                        <li>**Scroll do mouse (rodinha):** Para dar zoom no modelo.</li>
+                    </ul>
+                </li>
+                <li>Você também pode baixar os modelos de exemplo abaixo para testar!</li>
+            </ol>
+        </section>
+
+        <section class="examples-section">
+            <h2>Modelos de Exemplo para Baixar</h2>
+            <p>Experimente estes modelos 3D que você pode baixar e carregar aqui:</p>
+            <div class="example-models">
+                <div class="model-card">
+                    <h3>Cubo Simples</h3>
+                    <p>Um cubo básico para testar a funcionalidade.</p>
+                    <a href="modelos/Box.glb" download="Box.glb" class="download-button">Baixar Box.glb</a>
+                </div>
+                <div class="model-card">
+                    <h3>Patrulheiro (Robô)</h3>
+                    <p>Um modelo de robô mais detalhado.</p>
+                    <a href="modelos/PatrolBot.glb" download="PatrolBot.glb" class="download-button">Baixar PatrolBot.glb</a>
+                </div>
+            </div>
+            <p class="note">Para adicionar mais exemplos, baixe-os e coloque-os na pasta 'modelos' do seu projeto.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Adicione o import map para resolver os módulos -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
