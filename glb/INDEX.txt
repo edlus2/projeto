@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador GLB de Texto 3D</title>
+    <meta name="description" content="Transforme texto em modelos 3D GLB para impressão 3D ou uso em jogos">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerador GLB de Texto 3D</h1>
+        <p>Transforme seu texto em um modelo 3D para impressão ou jogos!</p>
+    </header>
+
+    <main>
+        <div class="generator-container">
+            <aside class="controls-panel">
+                <h2>Personalize Seu Texto 3D</h2>
+
+                <div class="control-group">
+                    <label for="text-input">Seu Texto:</label>
+                    <input type="text" id="text-input" placeholder="Digite seu texto aqui" maxlength="25" value="3D TEXT">
+                </div>
+
+                <div class="control-group">
+                    <label for="text-color">Cor do Texto:</label>
+                    <input type="color" id="text-color" value="#ff5722">
+                </div>
+                
+                <div class="control-group">
+                    <label for="text-depth">Profundidade:</label>
+                    <input type="range" id="text-depth" min="0.1" max="1.0" step="0.05" value="0.3">
+                    <span id="text-depth-value">0.3</span>
+                </div>
+
+                <div class="control-group checkbox-group">
+                    <input type="checkbox" id="add-base" checked>
+                    <label for="add-base">Adicionar Base</label>
+                </div>
+
+                <div class="control-group checkbox-group">
+                    <input type="checkbox" id="add-background-panel">
+                    <label for="add-background-panel">Adicionar Painel de Fundo</label>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="preview-button" class="action-button primary">Atualizar Visualização</button>
+                    <button id="generate-glb-button" class="action-button success">Baixar GLB</button>
+                </div>
+            </aside>
+
+            <div id="three-preview-container">
+                <div class="loading-overlay hidden">
+                    <div class="loading"></div>
+                    <p>Carregando visualizador 3D...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Gerador de Texto 3D. Todos os direitos reservados.</p>
+    </footer>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module" src="main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
