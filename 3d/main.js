@@ -34,11 +34,12 @@ function init() {
         1000 // Distância máxima para renderizar objetos
     );
     // Ajuste da posição inicial da câmera para favorecer a visualização da base
-    camera.position.set(0, 5, 8); 
+    camera.position.set(0, 7, 15); // Câmera um pouco mais longe
     camera.lookAt(0, 0, 0); // Faz a câmera olhar para o centro da cena
 
     // 3. Criação do Renderizador: Desenha a cena no canvas HTML
-    renderer = new THREE.WebGLRenderer({ antialias: true }); // antialias suaviza as bordas
+    renderer = new THREE.WebGLRenderer({ antialias: true });
+    // antialias suaviza as bordas
     renderer.setSize(container.clientWidth, container.clientHeight); // Define o tamanho do renderizador
     renderer.setPixelRatio(window.devicePixelRatio); // Melhora a qualidade em telas de alta resolução
     container.appendChild(renderer.domElement); // Adiciona o elemento <canvas> ao nosso div no HTML
@@ -54,28 +55,22 @@ function init() {
 
     // 5. Adiciona as luzes à cena
     addLights();
-
     // 6. Adiciona o helper de eixos (inicialmente escondido)
     axesHelper = new THREE.AxesHelper(5); // Eixos com tamanho 5
     axesHelper.visible = false; // Inicialmente invisível
     scene.add(axesHelper);
-
     // 7. Criação e Adição da Base/Chão estilizada
-    createBasePlane(); 
-    scene.add(basePlane); 
-
+    createBasePlane();
+    scene.add(basePlane);
     // 8. NOVO: Adiciona GridHelper e PolarGridHelper
     createGrids();
     scene.add(gridHelper);
     scene.add(polarGridHelper);
-
     // 9. NOVO: Cria e adiciona o sistema de partículas
     createParticles();
     scene.add(particles);
-
     // 10. Inicia o loop de animação
     animate();
-
     // 11. Carrega um modelo padrão ao iniciar a página (ex: Cubo Simples)
     loadModel('modelos/Box.glb', false);
 }
@@ -110,10 +105,9 @@ function createBasePlane() {
         color: 0x223344, // Cor base escura, quase azul-acinzentada
         emissive: 0x0a1b2c, // NOVO: Luz própria sutil para um brilho interno
         emissiveIntensity: 0.5, // Intensidade do brilho
-        roughness: 0.4,  // Superfície um pouco lisa, mas não espelhada
+        roughness: 0.4, // Superfície um pouco lisa, mas não espelhada
         metalness: 0.6   // Aspecto metálico
     });
-
     basePlane = new THREE.Mesh(geometry, material);
     basePlane.position.y = -0.05; // Posiciona a mesa para que a parte superior fique em Y=0
     basePlane.receiveShadow = true; // Permite que a mesa receba sombras de outros objetos
@@ -142,11 +136,10 @@ function createGrids() {
 
 // NOVO: Função para criar o sistema de partículas
 function createParticles() {
-    const particleCount = 1000; // Número de partículas
+    const particleCount = 500; // Reduzindo a quantidade de partículas para 500
     const particlesGeometry = new THREE.BufferGeometry();
     const positions = [];
     const colors = [];
-
     // Gerar posições e cores aleatórias para as partículas
     for (let i = 0; i < particleCount; i++) {
         // Posições aleatórias dentro de um cubo, centralizadas em Y
@@ -155,7 +148,6 @@ function createParticles() {
             Math.random() * 5,          // Y entre 0 e 5 (altura acima do chão)
             (Math.random() - 0.5) * 20  // Z entre -10 e 10
         );
-
         // Cores aleatórias (tons de azul/ciano/branco para futurista)
         const color = new THREE.Color();
         color.setHSL(Math.random() * 0.2 + 0.5, 0.7, 0.5 + Math.random() * 0.5); // Tons de ciano/azul
@@ -164,7 +156,6 @@ function createParticles() {
 
     particlesGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
     particlesGeometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
-
     // Material das partículas: PointsMaterial para pontos, ou ShaderMaterial para mais controle
     const particlesMaterial = new THREE.PointsMaterial({
         size: 0.05, // Tamanho da partícula
@@ -173,7 +164,6 @@ function createParticles() {
         transparent: true,
         opacity: 0.8
     });
-
     particles = new THREE.Points(particlesGeometry, particlesMaterial);
     particles.position.y = 2; // Posiciona as partículas ligeiramente acima do chão
 }
@@ -232,7 +222,6 @@ function loadModel(source, isLocalFile = false) {
     }
 
     const loader = new GLTFLoader();
-
     if (isLocalFile) {
         const reader = new FileReader();
         reader.onload = (event) => {
@@ -268,38 +257,36 @@ function handleLoadedModel(gltf) {
     const bbox = new THREE.Box3().setFromObject(currentModel);
     const center = bbox.getCenter(new THREE.Vector3());
     const size = bbox.getSize(new THREE.Vector3());
-
     // Centraliza o modelo, ajustando sua posição para que sua base esteja em Y=0
     currentModel.position.x = -center.x;
-    currentModel.position.y = -bbox.min.y; 
+    currentModel.position.y = -bbox.min.y;
     currentModel.position.z = -center.z;
 
-    // Define uma velocidade de rotação inicial para a animação de entrada
-    currentModel.rotationSpeed = 0.005;
+    // Garante que a rotação inicial seja zero
+    currentModel.rotationSpeed = 0;
 
     // Ajusta a câmera para focar no modelo e ter uma distância razoável
     const maxDim = Math.max(size.x, size.y, size.z);
     const fov = camera.fov * (Math.PI / 180);
-    let cameraZ = Math.abs((maxDim / 2) / Math.tan(fov / 2)) * 1.5;
-
+    let cameraZ = Math.abs((maxDim / 2) / Math.tan(fov / 2)) * 6;
     camera.position.z = cameraZ;
-    camera.position.y = size.y * 0.5; 
+    camera.position.y = size.y * 2;
 
     // Configura o alvo dos controles para o centro do modelo (relativo à mesa)
-    controls.target.set(0, size.y * 0.25, 0); 
+    controls.target.set(0, size.y * 0.25, 0);
     controls.update();
 
-    // Remove a rotação de entrada após um tempo
-    setTimeout(() => {
-        currentModel.rotationSpeed = 0;
-    }, 3000); 
+    // Remove a rotação de entrada após um tempo (agora desativado pois rotationSpeed é 0)
+    // setTimeout(() => {
+    //     currentModel.rotationSpeed = 0;
+    // }, 3000);
 }
 
 // --- Event Listeners ---
 
 // Event listener para o input de arquivo
 fileInput.addEventListener('change', (event) => {
-    const file = event.target.files[0];
+    const file = event.target.files?.[0]; // Use optional chaining para evitar erros
     if (file) {
         fileNameSpan.textContent = `Arquivo: ${file.name}`;
         loadModel(file, true);
@@ -307,23 +294,20 @@ fileInput.addEventListener('change', (event) => {
         fileNameSpan.textContent = 'Nenhum arquivo selecionado';
     }
 });
-
 // Event listener para o botão de alternar eixos
 toggleAxesButton.addEventListener('click', () => {
     if (axesHelper) {
-        axesHelper.visible = !axesHelper.visible; 
+        axesHelper.visible = !axesHelper.visible;
     }
 });
-
 // Event listener para o botão de alternar base/chão
 toggleBaseButton.addEventListener('click', () => {
     if (basePlane) {
-        basePlane.visible = !basePlane.visible; 
+        basePlane.visible = !basePlane.visible;
         gridHelper.visible = basePlane.visible; // Grids seguem a visibilidade da base
         polarGridHelper.visible = basePlane.visible;
     }
 });
-
 // Event listeners para os botões de cor de fundo
 colorButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -332,8 +316,22 @@ colorButtons.forEach(button => {
     });
 });
 
+// NOVO: Event listener para os botões "Testar na Tela"
+const testButtons = document.querySelectorAll('.test-button');
+testButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modelPath = button.dataset.modelPath; // Pega o caminho do modelo do atributo data-model-path
+
+        // Atualiza o nome do arquivo exibido
+        fileNameSpan.textContent = `Carregado: ${modelPath.split('/').pop()}`;
+
+        // Chama a função loadModel para carregar o modelo de exemplo
+        // A segunda parâmetro é 'false' porque não é um arquivo local do usuário
+        loadModel(modelPath, false);
+    });
+});
+
 // Event listener para o redimensionamento da janela
 window.addEventListener('resize', onWindowResize, false);
-
 // Inicia a cena 3D quando a página é completamente carregada
 window.onload = init;
