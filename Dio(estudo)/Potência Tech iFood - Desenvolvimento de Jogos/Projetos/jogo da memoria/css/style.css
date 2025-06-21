@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(126, 112, 255);
+    user-select: none;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background: linear-gradient(325deg,#71ff6c,#7fbbff,#70eeff);
+    padding: 40px 60px;
+}
+
+h2{
+    font-size: 3em;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.1;
+}
+
+.reset{
+    padding: 15px 20px;
+    width: 100%;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+}
+.reset:focus{
+    background-color: #71ff6c;
+    color: #7fbbff;
+}
+
+.game{
+    width: 430px;
+    height: 430px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.item{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+
+    font-size: 3em;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+
+.item::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(https://cdn-icons-png.flaticon.com/256/4099/4099931.png);
+    background-color: #000000;
+    background-size: cover;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+   
+}
+
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+
+.boxMatch::after,
+.boxOpen::after{
+    transform: rotateY(180deg);
+}

@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/fotos-premium/textura-de-madeira-grande-fundo-de-madeira-resistido-de-pranchas-com-pregos-enferrujadosafiado-e-altamente-detalhadoa-vista-de-cimapinho-conifero-aplainado-cru-naturala-superficie-da-mesa-para-atirar-em-postura-plana_146482-7234.jpg);
+    background-size: contain;
+}
+
+.cabe{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 20px;
+    background-image: url(https://img.freepik.com/vetores-gratis/fundo-preto-com-textura-de-fibra-de-carbono_1017-33436.jpg);
+    background-size: contain;
+    box-shadow: 0px -7px 20px 19px #0000008e;
+}
+
+.cabe h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.cabe div{
+    display: flex;
+    background-size: cover;
+    width: 100px;
+    height: 50px;
+}
+
+.interruptooff{
+    display: block;
+}
+.interruptoon{
+    display: none;
+}
+.estante{
+    background-color: black;
+    margin: auto;
+    height: 100%;
+    width: 450px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow:  11px 18px 20px 0px #00000094;
+}
+
+#divisoria1{
+    background-image: url(https://img.freepik.com/fotos-premium/mesa-de-madeira-marrom-sobre-um-fundo-preto-da-parede_174431-174.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 1px solid black;
+    width: 450px;
+    height: 200px;
+}
+#divisoria2{
+    background-image: url(https://img.freepik.com/fotos-premium/mesa-de-madeira-marrom-sobre-um-fundo-preto-da-parede_174431-174.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 1px solid black;
+    width: 450px;
+    height: 200px;
+}
+#divisoria3{
+    background-image: url(https://img.freepik.com/fotos-premium/mesa-de-madeira-marrom-sobre-um-fundo-preto-da-parede_174431-174.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    width: 450px;
+    height: 200px;
+}
+.base{
+    width: 150px;
+    height: 200px;  
+}
+.base img{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;      
+}
+.estas{
+    display: flex;
+}
+.est1{
+    display: flex;
+    box-shadow: inset -5px 13px 20px 0px #26f7f7; 
+}
+.est2{
+    display: flex;
+    box-shadow: inset 5px 13px 20px 0px #26f7f7;  
+ }
+ .est3{
+    display: flex;
+    box-shadow: inset -5px 13px 20px 0px #26f7f7; 
+}
+.informacao{
+    display: flex;
+    width: 800px;
+    height: 1000px;
+    background-color: #000000cb;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.informacao span{
+    font-size: 5em;
+    color: white;
+    text-align: end;
+    width: 100%;
+    padding: 50px 50px 0px 0px;
+    cursor: pointer;
+}
+.info{
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.466);
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.info div{
+    width: 350px;
+    height: 450px;
+}
+.imgpop img{
+    width: 100%;
+    height: 100%;
+}
+.texto{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.texto h2{
+    padding: 20px;
+}
+.panico{
+    display: none;
+}
+.it{
+    display: none;
+}
+.motoserra{
+    display: none;
+}
+.chapolin{
+    display: none;
+}
+.meedival{
+    display: none;
+}
+.scorpion{
+    display: none;
+}
+.goku{
+    display: none;
+}
+.laika{
+    display: none;
+}
+.saitama{
+    display: none;
+}

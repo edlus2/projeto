@@ -1,0 +1,77 @@
+@media screen and (max-width : 700px) {
+    #centro{
+        flex-wrap: wrap;
+    }
+    .inf img{
+        display: none;
+    }
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/maior.png'); /* Caminho para a imagem */
+    background-size: cover; /* Centraliza a imagem */
+    background-attachment: fixed; /* Centraliza a imagem */
+    background-position: center;  /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    background-blend-mode: lighten; /* Mistura a cor de fundo com a imagem */
+    height: 100vh; /* Define 100% da altura da viewport */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+     
+}
+
+#centro{
+    background-color: rgba(255, 255, 255, 0.8); /* Cor branca com 50% de opacidade */
+    height: 80vh;  /* Define 80% da altura da viewport */
+    width: 80%;    /* Define a largura desejada (80% neste caso) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 16px 20px 40px -10px black;
+}
+.inf{
+    text-align: center;
+    width: 100%; 
+}
+.inf  img{
+    margin: auto;
+    width: 50%;
+    height: 50%;
+}
+.rede p{
+    border: 1px solid black;
+    margin:  20px 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.you:hover{
+    background-color: red;
+    color: white;
+}
+.ins:hover{
+    background-color: #dd2a7b;
+    color: white;
+}
+.tik:hover{
+    background-color: black;
+    color: white;
+}
+.loj:hover{
+    background-color: coral;
+    color: white;
+}
+.fac:hover{
+    background-color: #0081ff;
+    color: white;
+    
+}
+.rede a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}

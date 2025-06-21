@@ -1,0 +1,293 @@
+@charset "utf-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@keyframes luz {
+    0%{
+        background-color: red ;
+    }
+    20%{
+        background-color:  blue;
+    }
+    40%{
+        background-color: yellow;
+    }
+    60%{
+        background-color: red;
+    }
+    80%{
+        background-color: yellow;
+    }
+    100%{
+        background-color: blue;
+    }
+}
+
+@keyframes led {
+    0%{
+        color:red ;
+    }
+    20%{
+        color:b
+    }
+    40%{
+        color: yellow;
+    }
+    60%{
+        color: red;
+    }
+    80%{
+        color:yellow;
+    }
+    100%{
+        color:blue;
+    }
+}
+
+body{
+    background-color: black;
+}
+
+header#fundo{
+    background-color: black;
+    background-image: url(img/capa.png);
+    height: 70vh;
+    width: 100%;
+    background-size: cover;   
+    background-position: top center;
+}
+
+header p{
+    padding-top: 15%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5em;
+    animation: led 5s infinite;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 70vh;
+}
+
+div>p{
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-width: 200px;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+    font: 2em sans-serif;
+}
+
+h2>img{
+    min-width: 100px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding-bottom: 100px;
+}
+
+
+div#p1{
+    background-color: black;
+    padding-top: 80px;
+
+}
+
+div#p2{
+    background-color: black; 
+    padding-top: 100px;
+}
+
+div#p3{
+    background-color:rgb(50, 50, 180);
+    padding-top: 100px;
+}
+
+div#p4{
+    background-color: rgb(184, 21, 21);
+    padding-top: 100px;
+}
+
+div#p5{
+    background-color:black;
+    padding-top: 100px;
+}
+
+div#p6{
+    background-color:rgba(53, 45, 45, 0.603);
+    padding-top: 100px;
+}
+
+div#p7{
+    background-color: rgba(0, 0, 0, 0.548);
+    padding-top: 100px;
+}
+
+div#p8{
+    background-color:rgba(250, 250, 24, 0.945);
+    padding-top: 100px;
+}
+
+div#p9{
+    background-color:fuchsia;
+    padding-top: 100px;
+}
+
+div#p10{
+    background-color: red;
+    padding-top: 100px;
+}
+
+div>p{
+    background-color: rgba(114, 114, 114, 0.11);
+    max-width: 800px ;
+    min-width: 200px;
+    padding-bottom: 100px;
+    border-radius: 5% 5% 0% 0%;
+}
+
+section#img1{
+    height: 400px;
+    width: 100%;
+    background-image: url(img/1\ resident\ evil4.png);
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 6px 6px 13px 6px rgba(255, 255, 255, 0.295);
+}
+
+section#img2{
+    height: 400px;
+    width: 100%;
+    background-image: url(img/2\ gears-of-wa.png);
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 6px 6px 13px 6px rgba(255, 255, 255, 0.295);
+    background-position: center center;
+}
+
+section#img3{
+    height: 400px;
+    width: 100%;
+    background-image: url(img/3\ Rocket-League.png);
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 6px 6px 13px 6px black;
+}
+
+section#img4{
+    height: 400px;
+    width: 100%;
+    background-image: url(img/4\ God-of-War.png);
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 6px 6px 13px 6px black;
+    background-position: center center;
+}
+
+section#img5{
+    height: 400px;
+    width: 100%;
+    background-image: url(img/5\ silent\ hill.png);
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 6px 6px 13px 6px rgba(255, 255, 255, 0.295);
+}
+
+section#img6{
+    height: 400px;
+    width: 100%;
+    background-image: url(img/6\ state\ of\ decay.png);
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 6px 6px 13px 6px black;
+    background-position: center center;
+}
+
+section#img7{
+    height: 400px;
+    width: 100%;
+    background-image: url(img/7\ metal\ machine.png);
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 6px 6px 13px 6px rgba(255, 255, 255, 0.295);
+    background-position: center center;
+}
+
+section#img8{
+    height: 400px;
+    width: 100%;
+    background-image: url(img/8\ forzan.png);
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 6px 6px 13px 6px black;
+    background-position: center center;
+}
+
+section#img9{
+    height: 400px;
+    width: 100%;
+    background-image: url(img/9\ fotnite.png);
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 6px 6px 13px 6px black;
+}
+
+section#img10{
+    height: 400px;
+    width: 100%;
+    background-image: url(img/10\ mario.png);
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 6px 6px 13px 6px black;
+    background-position: center center;
+}
+
+footer{
+    width: 100%;
+    height: 250px;
+    display: inline-block;
+    margin: auto;
+}
+
+footer >p{
+    font: 2em sans-serif;
+    padding: 50px 0px;
+    text-align: center;
+    color: white;
+}
+
+ul li{ 
+    font: 1em sans-serif;
+    text-align: center;
+    color: white;
+}
+
+footer div{
+    width: 100%;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+footer a img{
+    width: 100px;
+    height: 100px;
+    
+}
+
+#centro{
+    margin: auto;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#imgf{
+    animation: luz 5s infinite;
+}

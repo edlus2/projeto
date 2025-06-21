@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+@font-face {
+   font-family: testo;
+   src: url(../font/testo/Retro\ Gaming.ttf);
+}
+@font-face {
+   font-family: titulo;
+   src: url(../font/titulo/PixelSplitter-Bold.ttf);
+}
+
+*{
+margin: 0px;
+padding: 0px;
+}
+
+body{
+background-color: rgb(255, 255, 255);
+font-family: Arial, Helvetica, sans-serif;
+width: 100%;
+}
+
+header{
+height: 60vh;
+width: 100%;
+}
+
+.content{
+height: 60vh;
+width: 100%;
+overflow: hidden;
+box-shadow: 2px 2px 10px 3px black;
+}
+
+.sobimg{
+background-image: linear-gradient(to right, black, rgb(90, 48, 48), rgb(51, 51, 117));
+color: rgb(255, 255, 255);
+text-align: center;
+padding: 10px;
+
+}
+.navigation{
+position: absolute;
+bottom:42%;
+left: 50%;
+transform: translate(-50%);
+display: flex;
+}
+
+.bar{
+width: 40px;
+height: 20px;
+border: 1px solid rgb(106, 248, 11);
+background-color: rgb(0, 0, 0);
+margin: 5px;
+border-radius: 10%;
+cursor: pointer;
+transition: 0.4s;
+}
+
+.bar:hover{
+background-color: rgba(255, 255, 255, 0.774);
+}
+
+input{
+display: none;
+}
+
+.slides{
+display: flex;
+width: 400%;
+height: 100%;
+}
+
+.slide{
+width: 25%;
+transition: .5s;
+}
+
+.slide img{
+width: 100%;
+height: 100%;
+}
+
+#slide1:checked ~ .s1{
+margin-left: 0;
+} 
+
+#slide2:checked ~ .s1{
+margin-left: -25%;
+}
+
+#slide3:checked ~ .s1{
+margin-left: -50%;
+}
+
+#slide4:checked ~ .s1{
+margin-left: -75%; 
+}
+
+main{
+   background-color: rgb(255, 255, 255);
+}
+
+section >h2{
+   text-align: center;
+   padding: 50px 0px;
+   font-style: normal;
+   font-size: 3em;
+   font-family: titulo, Arial, Helvetica, sans-serif;
+}
+
+.paragrafo{
+   text-align: justify;
+   font-family: testo ,'Times New Roman', Times, serif;
+   font-size: 20px;
+   padding-bottom: 50px;
+   display: block;
+   margin: auto;
+   width: 100%;
+   min-width: 200px;
+   max-width: 800px;
+   text-indent: 30px;
+}
+.paragrafo>p{
+   padding: 10px;
+   text-indent: 30px;
+}
+#meio{
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: row;
+   flex-wrap: wrap;
+   height: 100%;
+   background-image: url(../img/balao.jpg);
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+   
+}
+
+.meio1{
+   margin: 5vh 0 5vh 0;
+   background-color: black;
+   width: 300px;
+   height: auto;
+   
+}
+
+.meio1>img{
+   min-width: 100px;
+   width: 100%;
+   max-width: 300px;
+   height: auto;
+}
+
+.meio1>.titulo{
+   font-family: titulo, Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   font-size: 1.2em;
+   padding: 10px 0px;
+   text-align: center;
+   height: auto;
+}
+.meio1>p{
+   font-family: testo, Arial, Helvetica, sans-serif;
+   font-size: 0.8em;
+   padding: 0px 20px;
+   text-align: justify;
+   text-indent: 30px;
+}
+
+.meio1{
+   background-color: rgba(255, 255, 255, 0.493);
+
+}
+
+#fundo{
+   display: flex;
+   justify-content: space-around;
+   flex-direction: row;
+   flex-wrap: wrap;
+   width: 100%;
+   position: relative;
+}
+
+.fundo1 p{
+   padding: 10px;
+   text-indent: 30px;
+   min-width:200px;
+   max-width: 800px;
+   text-align: justify;  
+   font-family: testo ,'Times New Roman', Times, serif;
+   font-size: 20px;
+   padding-bottom: 50px;
+}
+
+.fundo2>img{
+   width: 100%;
+   min-width: 100px;
+   max-width: 400px;
+   height:auto;
+}
+
+.imf{
+   background-color: black;
+   color: white;
+}
+
+#imgfim{
+   background-color: black;
+   display:flex;
+   justify-content: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 15px;
+}
+
+.imgfim > img{
+   border: 5px solid black;
+   width: 100%;
+   min-width: 100px;
+   max-width: 300px;
+   height: 300px;
+}
+
+#footer{
+   padding: 20px;
+   background-color: gray;
+}
+
+.foot{
+   padding: 30px;
+   display:flex;
+   justify-content: space-around;
+   flex-direction: row;
+   flex-wrap: wrap;
+   background-color: rgba(182, 175, 175, 0.829);
+}
+
+.footer{
+   padding: 10px;
+   width: 200px; 
+}
+
+.footer>p{
+   padding-bottom: 10px;
+   font: 1.5em sans-serif;
+}
+
+li>a{
+   color: white;
+   text-decoration: none;
+}

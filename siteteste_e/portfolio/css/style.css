@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar .tablink {
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    text-align: center;
+}
+
+.tablink:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#Home {
+    background-color: #e0f7fa;
+}
+
+#Experiencia {
+    background-color: #ffeb3b;
+}
+
+#Formacao {
+    background-color: #8bc34a;
+}
+
+#Qualificacoes {
+    background-color: #f44336;
+}
+
+#Sobre {
+    background-color: #9c27b0;
+}

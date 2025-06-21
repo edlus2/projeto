@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <style>
+        body { margin: 0; }
+        #3d-boneco { width: 100%; height: 500px; }
+    </style>
+</head>
+<body>
+    <div id="3d-boneco"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/loaders/OBJLoader.js"></script>
+
+    <script>
+        let scene, camera, renderer, model;
+
+        function init3D() {
+            // Criando a cena
+            scene = new THREE.Scene();
+
+            // Criando a câmera
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+            // Criando o renderizador e adicionando ao DOM
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, 500); // Tamanho do canvas
+            document.getElementById("3d-boneco").appendChild(renderer.domElement);
+
+            // Adicionando luz à cena
+            const light = new THREE.AmbientLight(0xffffff, 1); // luz suave
+            scene.add(light);
+
+            // Carregando o modelo 3D (substitua pelo caminho correto do arquivo .obj)
+            const loader = new THREE.OBJLoader();
+            loader.load('path/to/your-model.obj', (obj) => {
+                model = obj;
+                scene.add(model);
+
+                // Ajuste da posição do modelo
+                model.position.set(0, -1, 0);
+
+                // Inicia a animação do modelo
+                animate();
+            }, undefined, (error) => {
+                console.error(error);
+            });
+
+            // Definindo a posição da câmera
+            camera.position.z = 5;
+
+            // Função para animação contínua
+            function animate() {
+                requestAnimationFrame(animate);
+                if (model) {
+                    model.rotation.y += 0.01; // Exemplo de movimento (rotação)
+                }
+                renderer.render(scene, camera);
+            }
+        }
+
+        init3D();
+    </script>
+</body>
+</html>

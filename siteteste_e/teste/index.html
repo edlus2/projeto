@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/256/150/150361.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="cabe">
+            <h1>Estante de figure actions</h1>
+            <div id="interrupto">
+                <img class="interruptooff" src="img/interrupto-off.png" alt="off">
+                <img class="interruptoon" src="img/interrupto-on.png" alt="on">
+            </div> 
+        </div>
+    </header>
+    <main>
+        <div class="estante">
+            <div id="divisoria1" class="est">
+                <div class="base" onclick="pan()"><img src="img/panico.png" alt="action figure panico "></div>
+                <div class="base" onclick="it()"><img src="img/it.png" alt="action figure it"></div>
+                <div class="base" onclick="mot()"><img src="img/motoserra.png" alt="action figure motoserra"></div>
+            </div>
+            <div id="divisoria2" class="esta">
+                <div class="base" onclick="chapol()"><img src="img/chapolin.png" alt="action figure chapolin"></div>
+                <div class="base" onclick="medi()"><img src="img/meedival.png" alt="action figure meedival"></div>
+                <div class="base" onclick="scorp()"><img src="img/scorpion.png" alt="action figure scorpion"></div>
+            </div>
+            <div id="divisoria3" class="divisoria estan">
+                <div class="base" onclick="gok()"><img src="img/goku.png" alt="action figure goku"></div>
+                <div class="base" onclick="lai()"><img src="img/laika.png" alt="action figure laika"></div>
+                <div class="base" onclick="sai()"><img src="img/saitama.png" alt="action figure saitama"></div>
+            </div>
+        </div>
+        <section>
+            <div class="panico">
+                <span onclick="volta()">X</span>
+                <div class="info">
+                    <div class="imgpop">
+                        <img src="img/panico.png" alt="action figure panico">
+                    </div>
+                    <div class="texto">
+                        <h2>Panico</h2>
+                        <p>
+                            <strong>Personagem:</strong>
+                            O filme conta a história da adolescente Sidney Prescott, que é perseguida por um assassino misterioso chamado Ghostface, enquanto lida com o aniversário do assassinato de sua mãe.
+                            <br>
+                            <strong>Tamanho:</strong>40cm
+                            <br>
+                            <strong>Tempo:</strong> 23horas
+                            <br>
+                            <strong>Material:</strong>840gramas
+                        </p>
+                    </div>
+                </div> 
+            </div>
+            <div class="it">
+                <span onclick="volta()">X</span>
+                <div class="info">
+                    <div class="imgpop">
+                        <img src="img/it.png" alt="action figure it">
+                    </div>
+                    <div class="texto">
+                        <h2>IT</h2>
+                        <p>
+                            <strong>Personagem:</strong>
+                            Um grupo de crianças se une para investigar o misterioso desaparecimento de vários jovens em sua cidade. Eles descobrem que o culpado é Pennywise, um palhaço cruel que se alimenta de seus medos e cuja violência teve origem há vários séculos.
+                            <br>
+                            <strong>Tamanho:</strong>50cm
+                            <br>
+                            <strong>Tempo:</strong> 28horas
+                            <br>
+                            <strong>Material:</strong>900gramas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="motoserra">
+                <span onclick="volta()">X</span>
+                <div class="info">
+                    <div class="imgpop">
+                        <img src="img/motoserra.png" alt="action figure motoserra">
+                    </div>
+                    <div class="texto">
+                        <h2>Leatherface</h2>
+                        <p>
+                            <br>
+                            <strong>Personagem:</strong>
+                            No caminho para visitar o túmulo de seu avô, cinco jovens se perdem e mergulham em um pesadelo sem fim quando conhecem uma família de canibais. Os psicopatas atacam os forasteiros utilizando uma variedade de métodos brutais e sádicos.                            
+                            <br>
+                            <strong>Tamanho:</strong>32cm
+                            <br>
+                            <strong>Tempo:</strong> 19horas
+                            <br>
+                            <strong>Material:</strong>500gramas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="chapolin">
+                <span onclick="volta()">X</span>
+                <div class="info">
+                    <div class="imgpop">
+                        <img src="img/chapolin.png" alt="action figure chapolin">
+                    </div>
+                    <div class="texto">
+                        <h2>chapolin</h2>
+                        <p>
+                            <strong>chapolin:</strong>
+                            O Chapolin Colorado é um herói atrapalhado, medroso e desastrado, que sempre aparece quando alguém precisa. Com sua marreta biônica e a pílula encolhedora, ele, muitas vezes, provoca mais confusão do que necessariamente ajuda.
+                            <br>
+                            <strong>Tamanho:</strong>25cm
+                            <br>
+                            <strong>Tempo:</strong> 20horas
+                            <br>
+                            <strong>Material:</strong>430gramas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="meedival">
+                <span onclick="volta()">X</span>
+                <div class="info">
+                    <div class="imgpop">
+                        <img src="img/meedival.png" alt="action figure meedival">
+                    </div>
+                    <div class="texto">
+                        <h2>medieval</h2>
+                        <p>
+                            <strong>Personagem:</strong>
+                            MediEvil é um remake de um clássico game de mesmo nome lançado em outubro de 1998, para o PlayStation One. A nova versão dá uma repaginada no visual do game, mas mantém boa parte de sua jogabilidade clássica, tanto para o bem quanto para o mal.
+                            <br>
+                            <strong>Tamanho:</strong>28cm
+                            <br>
+                            <strong>Tempo:</strong> 15horas
+                            <br>
+                            <strong>Material:</strong>340gramas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="scorpion">
+                <span onclick="volta()">X</span>
+                <div class="info">
+                    <div class="imgpop">
+                        <img src="img/scorpion.png" alt="action figure scorpion">
+                    </div>
+                    <div class="texto">
+                        <h2>scorpion</h2>
+                        <p>
+                            <strong>Personagem:</strong>
+                            Scorpion é um personagem jogável da franquia Mortal Kombat, criada pela Midway Games. Estreando como um dos sete personagens jogáveis originais do primeiro título, Mortal Kombat.
+                            <br>
+                            <strong>Tamanho:</strong>28cm
+                            <br>
+                            <strong>Tempo:</strong> 15horas
+                            <br>
+                            <strong>Material:</strong>440gramas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="goku">
+                <span onclick="volta()">X</span>
+                <div class="info">
+                    <div class="imgpop">
+                        <img src="img/goku.png" alt="action figure goku">
+                    </div>
+                    <div class="texto">
+                        <h2>goku</h2>
+                        <p>
+                            <strong>Personagem:</strong>
+                            Son Goku, cujo nome de nascimento é Kakarotto, é o protagonista da franquia Dragon Ball, criada por Akira Toriyama.
+                            <br>
+                            <strong>Tamanho:</strong>25cm
+                            <br>
+                            <strong>Tempo:</strong> 14horas
+                            <br>
+                            <strong>Material:</strong>340gramas
+                        </p>
+                        <br>
+                        <h2>Pyramid Head</h2>
+                        <p>
+                            <strong>Personagem:</strong>
+                            Silent Hill é uma série de jogos eletrônicos do gênero survival horror produzida e publicada pela Konami. Sua estreia foi no jogo homônimo para PlayStation em fevereiro de 1999.
+                            <br>
+                            <strong>Tamanho:</strong>25cm
+                            <br>
+                            <strong>Tempo:</strong> 13horas
+                            <br>
+                            <strong>Material:</strong>340gramas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="laika">
+                <span onclick="volta()">X</span>
+                <div class="info">
+                    <div class="imgpop">
+                        <img src="img/laika.png" alt="action figure laika">
+                    </div>
+                    <div class="texto">
+                        <h2>laika</h2>
+                        <p>
+                            <strong>Personagem:</strong>
+                            Laika é um monstro nativo de 5 estrelas do tipo Dragão do Fogo. Ele é conhecido por sua habilidade única "Justice" (Justiça), que causa dano adicional proporcional ao HP máximo do inimigo.
+                            <br>
+                            <strong>Tamanho:</strong>20cm
+                            <br>
+                            <strong>Tempo:</strong> 13horas
+                            <br>
+                            <strong>Material:</strong>240gramas
+                        </p>
+                        <br>
+                        <h2>BMO</h2>
+                        <p>
+                            <strong>Personagem:</strong>
+                            BMO (ou Beemo) é o video-game de Finn e Jake. Ele tem vida, podendo falar, andar e teletransportar as pessoas ao video-game.
+                            <br>
+                            <strong>Tamanho:</strong>15cm
+                            <br>
+                            <strong>Tempo:</strong> 12horas
+                            <br>
+                            <strong>Material:</strong>230gramas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="saitama">
+                <span onclick="volta()">X</span>
+                <div class="info">
+                    <div class="imgpop">
+                        <img src="img/saitama.png" alt="action figure saitama">
+                    </div>
+                    <div class="texto">
+                        <h2>James P. Sullivan</h2>
+                        <p>
+                            <strong>Personagem:</strong>
+                            Protagonistas dos dois filmes Monstros S.A.
+                            <br>
+                            <strong>Tamanho:</strong>10cm
+                            <br>
+                            <strong>Tempo:</strong> 8horas
+                            <br>
+                            <strong>Material:</strong>140gramas
+                        </p>
+                        <h2>Mega man</h2>
+                        <p>
+                            <strong>Personagem:</strong>
+                            Mega Man é uma franquia de jogos eletrônicos de plataforma criada pela Capcom.
+                            <br>
+                            <strong>Tamanho:</strong>40cm
+                            <br>
+                            <strong>Tempo:</strong> 8horas
+                            <br>
+                            <strong>Material:</strong>140gramas
+                        </p>
+                        <h2>Saitama</h2>
+                        <p>
+                            <strong>Personagem:</strong>
+                            Saitama é um personagem fictício.
+                            <br>
+                            <strong>Tamanho:</strong>20cm
+                            <br>
+                            <strong>Tempo:</strong> 10horas
+                            <br>
+                            <strong>Material:</strong>230gramas
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
