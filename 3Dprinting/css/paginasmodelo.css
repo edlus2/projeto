@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+/*======= Cores utilizado no site =======
+#131A40
+#273273
+#4E64A6
+#829FD9
+#99B7F9
+*/
+
+/*======= configuraçao da paginas secundaria =======*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*======= configuraçao imagem inicial =======*/
+picture img{
+    width: 100%;
+    height: 100vh;
+}
+
+/*======= configuraçao do conteudo =======*/
+.titulo{
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.titulo h1{
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.titulo h2{
+    font: 2em sans-serif;
+    text-transform: capitalize;   
+}
+
+@media screen and (min-width: 800px){
+.anime{
+    background-image: url(../html/img/p.modelo/p.anime/fundo.jpg);
+}
+.data{
+    background-image: url(../html/img/p.modelo/p.data/fundo.jpg);
+}
+.desenho{
+    background-image: url(../html/img/p.modelo/p.desenho/fundo.jpg);
+}
+.filme{
+    background-image: url(../html/img/p.modelo/p.filme/fundo.jpg);
+}
+.game{
+    background-image: url(../html/img/p.modelo/p.game/fundo.png);
+}
+.serie{
+    background-image: url(../html/img/p.modelo/p.serie/fundo.jpg);
+}
+}
+section{
+    background-color: #829FD9;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    text-align: center;
+}
+#container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+.box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: hsla(231, 54%, 16%, 0.5);
+    margin: 20px 0px;
+    height: 500px;
+    width: 300px;
+    border: 1px solid #131A40;
+    border-radius: 10px;
+}
+.imagem{
+    height: 300px;
+    width: 240px;
+}
+.imagem a img{
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+    height: 100%;
+}
+.conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131A40;
+    color: white;
+    height: 90px;
+    width: 100%;
+}
+
+/*======= configuraçao pag orcamento =======*/
+.geral{
+    background-color: #ffffff;
+}
+.geral .tit{
+    height: 30vh;
+    margin-bottom: 50px;
+    box-shadow:5px 5px 12px 0px #131A40;
+} 
+.geral h1{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50% ,-50%);   
+}
+.orcanime .tit{
+    background-image: url(../html/img/p.modelo/p.anime/fundo.jpg);
+}
+.orcdata .tit{
+    background-image: url(../html/img/p.modelo/p.data/fundo.jpg);
+}
+.orcdesenho .tit{
+    background-position: center center;
+    background-image: url(../html/img/p.modelo/p.desenho/fundo.jpg);
+}
+.orcfilme .tit{
+    background-image: url(../html/img/p.modelo/p.filme/fundo.jpg);
+}
+.orcgames .tit{
+    background-position: center;
+    background-image: url(../html/img/p.modelo/p.game/fundo.png);
+}
+.orcserie .tit{
+    background-position: center;
+    background-image: url(../html/img/p.modelo/p.serie/fundo.jpg);
+}
+#orcamento{
+    background-color: #ffffff;
+    display: block;
+    margin: auto;
+    max-width:1200px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.infororcamento{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.infororcamento h3{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+.infororcamento p {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 350px;
+    text-align: justify;
+    font-size: 1.1em;
+}
+.infororcamento div{
+    border-radius: 10px;
+    width: 400px;
+    height: 410px;
+    background-color: #829fd942;
+    margin: 20px;
+}
+.infororcamento a{
+    text-decoration: none;
+}
+.infororcamento a img {
+    border-radius: 10px;
+    width: 100%;
+    min-width: 100px;
+    max-width: 300px;
+    min-height: 200px;
+    max-height: 400px;
+}
+.infororcamento a p{
+    text-align: center;
+    color: black;
+}
+
+/*======= configuraçao do formulario =======*/
+
+.formulario{
+    box-shadow: 3px 3px 3px #829FD9;
+    border-radius: 10px;
+    padding: 20px 0;
+    display: block;
+    margin: auto;
+    width: 750px;
+    border:1px solid #99B7F9 ;
+}
+.formulario h2{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0px;
+}
+.text{
+    border-radius: 10px;
+    border: 1px solid #4E64A6;
+    width: 100%;
+    padding: 10px; 
+}
+.form{
+    padding: 10px;
+}
+.botao input{
+    border: 1px solid #131A40;
+    background-color: white;
+    color: #131A40;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+}
+.botao input:hover{
+    background-color: #131A40;
+    color: white;
+}
+.oculto{
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    .contato{
+        width: 500px;
+    }
+    .contato h2{ 
+        font-size: 1.5em;
+    }
+    .formulario{
+        width:500px;
+    }
+}
+@media screen and (max-width: 530px){
+    .contato{
+        width: 300px;
+    }
+    .contato h2{
+        font-size: 0.9em;
+    }
+    .formulario{
+        width:300px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .contato{
+        width: 250px;
+    }
+    .contato h2{
+        font-size: 0.7em;
+    }
+    .formulario{
+        width:250px;
+    }
+    .botao input{
+        width: 150px; 
+    }
+}
+
+/*======= configuraçao da pagina 3d =======*/
+.pagina3d{
+    overflow: hidden;
+}
+iframe{
+    height: 100vh;
+    width: 100vw;
+}

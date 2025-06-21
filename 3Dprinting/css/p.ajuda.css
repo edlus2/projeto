@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+/*======= Cores utilizado no site =======
+#131A40
+#273273
+#4E64A6
+#829FD9
+#99B7F9
+*/
+
+/*======= configuraçao geral da paginas secundaria =======*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #99B7F9;
+    background-image: url(../html/img/p.ajuda/fundo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*======= configuraçao imagem inicial =======*/
+picture img{
+    width: 100%;
+    height: 100vh;
+}
+
+/*======= configuraçao conteudo da pagina =======*/
+.conteudo{
+    max-width: 800px;
+    margin: auto;
+}
+.conteudo h1 {
+    color: #131A40;
+    text-align: center;
+    padding: 30px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.box{
+    background-color: white;
+    box-shadow: 3px 3px 3px #829FD9;
+    border:1px solid #4E64A6;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+.perguntas h2::before{
+    content: '';
+    border-radius: 10px;
+    margin-right: 20px;
+    width: 20px;
+    height: 10px;
+    background-color: #131A40;
+    display: inline-block;
+}
+.perguntas h2{
+    cursor: pointer;
+    color: #273273;
+}
+.perguntas h2::after{
+    content: '+';
+    color: #131A40;
+    float: right;
+    transition:.7s ease;
+}
+.perguntas p{
+    text-indent: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 0px;
+    margin: auto;
+    max-width: 600px;
+    display: none;
+}
+.perguntas span{
+    font-weight: bold;
+}
+.perguntas ul{
+    margin: auto;
+    max-width: 600px;
+    text-indent: 50px;
+    display: none;
+    list-style-type: none;
+}
+.click{
+    display: none;
+}
+.click:checked + .perguntas p{
+    display: block;
+}
+.click:checked + .perguntas ul{
+    display: block;
+}
+.click:checked + .perguntas h2::after{
+    transform: rotate(135deg);
+}
+
+/*======= configuraçao do formulario =======*/
+#formulario{
+    margin-bottom: 50px;
+    width: 100%;
+}
+#formulario h2{
+    color: #131A40;
+    text-align: center;
+    padding: 30px 0px 0px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+#formulario p{
+    color: #131A40;
+    text-align: center;
+    padding: 0px 0px 30px 0px;;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+.formulario{
+    background-color: white;
+    box-shadow: 3px 3px 3px #829FD9;
+    border-radius: 10px;
+    padding: 20px 0;
+    display: block;
+    margin: auto;
+    width: 750px;
+    border:1px solid #99B7F9 ;
+}
+.text{
+    border-radius: 10px;
+    border: 1px solid #4E64A6;
+    width: 100%;
+    padding: 10px; 
+}
+.form{
+    padding: 10px;
+}
+.botao input{
+    border: 1px solid #131A40;
+    background-color: white;
+    color: #131A40;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+.botao input:hover{
+    background-color: #131A40;
+    color: white;
+}
+.oculto{
+    display: none;
+}
+@media screen and (max-width: 850px) {
+    .formulario{
+        box-shadow: 3px 3px 3px #829FD9;
+        width:500px;
+        margin: auto;
+        display: block;
+        border: 1px solid #4E64A6;
+        margin-bottom: 30px;}
+}
+@media screen and (max-width: 550px){
+    .formulario{
+        box-shadow: 3px 3px 3px #829FD9;
+        width:300px;
+        margin: auto;
+        display: block;
+        border: 1px solid #4E64A6;
+        margin-bottom: 30px;}
+}

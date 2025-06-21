@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/*======= Cores utilizado no site =======
+#131A40
+#273273
+#4E64A6
+#829FD9
+#99B7F9
+*/
+
+/*======= configuraçao divisao inicial =======*/
+#colorido{
+    margin-top:-7px;
+    height: 10px;
+    width: 100%;
+    background-image: linear-gradient(to left,#4E64A6,#829FD9,#99B7F9 );
+}
+
+/*======= configuraçao da divisao final =======*/
+.colorido{
+    height: 10px;
+    width: 100%;
+    background-image: linear-gradient(to left,#4E64A6,#829FD9,#99B7F9 );
+}
+
+/*======= configuraçao footer =======*/
+footer{
+    background-color: #131A40;
+    width: 100%;
+}
+#footer{
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.footerr img{
+    max-width: 200px;
+}
+.footer{
+    padding: 50px 20px 10px 20px;
+    font-weight: 200;
+    color: white;
+}
+.footer span {
+    font-weight: bold;
+}
+footer .uil:before{
+    font-size: 2em;
+    color:#99B7F9;
+}
+.central{
+    text-align: center;
+}

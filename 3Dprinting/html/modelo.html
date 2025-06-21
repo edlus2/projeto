@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing</title>
+    <link rel="shortcut icon" href="img/p.inicial/favicon.ico" type="image/x-icon">
+    
+    <!--configuração da barra de menu css-->
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- configuração conteudo-->
+    <link rel="stylesheet" href="../css/p.modelo.css">
+
+    <!-- configuração footer-->
+    <link rel="stylesheet" href="../css/footer.css">
+
+</head>
+<body onload="loading()">
+    
+    <!--configuração Preload-->
+    <div class="boxload">
+        <div class="preload"></div>
+    </div>
+    <div class="carregando">
+
+        <!--configuração da barra de menu html-->
+        <header>
+            <div class="nav-bar">
+                <a href="../index.html" class="logo"><img src="img/p.inicial/logo.png" alt="logo do site" style="height: 90px;"></a>
+                <div class="navigation">
+                    <div class="nav-items">
+                        <i class="uil uil-times nav-close-btn"></i>
+                        <a href="../index.html"><i class="uil uil-home"></i> Home</a>
+                        <a href="galeria.html"><i class="uil uil-images"></i>Galeria</a>
+                        <a href="ajuda.html"><i class="uil uil-lightbulb-alt"></i> Ajuda</a>
+                        <a href="contato.html"><i class="uil uil-envelope"></i> Contato</a>
+                    </div>
+                </div>
+                <i class="uil uil-apps nav-menu-btn"></i>
+            </div>
+            <div class="scroll-indicator-container">
+                <div class="scroll-indicator-bar"></div>
+            </div>
+        </header>
+
+        <!--configuração do conteudo da pagina-->
+        <main id="modelo">
+            <div>
+                <picture>
+                    <source media="(max-width: 550px)" srcset="img/p.modelo/modelomobile.png" />
+                    <source media="(max-width: 950px)" srcset="img/p.modelo/modelotablet.png" />
+                    <img src="img/p.modelo/modelodesktop.png" alt=" imagem inicial da pagina modelo com um modelo de personagem 3d com logo" />
+                </picture> 
+            </div>
+
+            <!--configuraçao divisao -->
+            <div id="colorido"></div>
+            
+            <!--configuração do conteudo da pagina-->
+            <h1>Modelos de figura action</h1>
+            
+            <section>
+                <div class="vani">
+                    <!-- Animes -->
+                    <a class="catalogo" href="modelos/anime.html" data-tilt data-tilt-scale="1.1">
+                        <div class="card anime" >
+                            <h2>Animes</h2>
+                        </div>
+                    </a>
+                    <!-- Datas Comemorativas -->
+                    <a class="catalogo" href="modelos/datas.html" data-tilt data-tilt-scale="1.1">
+                        <div class="card datas" >
+                            <h2>Datas Comemorativas</h2>
+                        </div>
+                    </a>
+                    <!-- Desenhos -->
+                    <a class="catalogo" href="modelos/desenhos.html" data-tilt data-tilt-scale="1.1">
+                        <div class="card desenhos" >
+                            <h2>Desenhos</h2>
+                        </div>
+                    </a>
+                    <!-- Filmes -->
+                    <a class="catalogo" href="modelos/filmes.html" data-tilt data-tilt-scale="1.1">
+                        <div class="card filmes" >
+                            <h2>Filmes</h2>
+                        </div>
+                    </a>
+                    <!-- Games -->
+                    <a class="catalogo" href="modelos/games.html" data-tilt data-tilt-scale="1.1">
+                        <div class="card games" >
+                            <h2>Games</h2>
+                        </div>
+                    </a>
+                    <!-- Séries -->
+                    <a class="catalogo" href="modelos/series.html" data-tilt data-tilt-scale="1.1">
+                        <div class="card series" >
+                            <h2>Séries</h2>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!--configuraçao divisao -->
+            <div class="colorido"></div>
+
+        </main>
+        <!--configuraçao footer -->
+        <footer>
+            <div id="footer">
+                <div class="footerr">
+                    <img src="img/p.inicial/logo.png" alt="logo do site">
+                </div>
+                <div class="footer">
+                    <p>ATENDIMENTO O CLIENTE</p>
+                    <p><span>SAC - Horário de Atendimento:</span></p>
+                    <p>Seg. à Sex. <span>9:00h</span> às <span>18:00h</span></p>
+                    <p><span>Whatsapp:</span> 27 992489236</p>
+                    <p>Atendimento via email:</p>
+                    <p><span>E-mail:</span> 3d.impressoesltda@gmail.com </p>
+                </div>
+                <div class="footer central">
+                    <p>Siga-nos</p>
+                    <a target="_blank" href="https://instagram.com/3d.printingltda?igshid=ZDdkNTZiNTM="><i class="uil uil-instagram-alt"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100092244554681&mibextid=ZbWKwL"><i class="uil uil-facebook"></i></a>
+                    <a target="_blank" href="https://github.com/edlus2"><i class="uil uil-github-alt"></i></a>
+                    <br><br>
+                    <p>&copy; 2023 3D Printing. Todos os direitos reservados.</p>
+                    <p>CNPJ: 00.000.000/0000-00</p>
+                    <p>R IGUATEMI, 712  - VILA NOVA DE COLARES/ES</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--configuração java da barra menu-->
+    <script src="../js/menu.js"></script>
+
+    <!--configuração java das categoria-->
+    <script type="text/javascript" src="../js/vanilla-tilt.babel.js"></script>
+
+    <!--configuração java preload-->
+    <script src="../js/preload.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/*======= fonte utilizado no site =======*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*======= font-family: 'Roboto', sans-serif; =======*/
+
+/*======= Cores utilizado no site =======
+#131A40
+#273273
+#4E64A6
+#829FD9
+#99B7F9
+*/
+
+/*======= configuraçao pagina obrigado =======*/
+*{
+    margin: 0;
+    padding: 0;   
+}
+#obrigado{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    background-color: #99B7F9;
+    background-image: url(../html/img/p.inicial/fundoobrigado.jpg)
+}
+.imagem{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.618);
+}
+.imagem img{
+    height: 20vh;
+}
+#conteudo{
+    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.texto h1{
+    font-size: 2.5em;
+    color: #273273;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+}
+.texto h2{
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+    color: #273273;
+}
+.texto p{
+    margin-top: 10px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+}
+.carta{
+    width: 30%;
+}
+.carta img{
+    width: 100%;
+}
+section a{
+    color: white;
+    padding: 20px;
+    background-color:#273273 ;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    border-radius: 10px;
+}
+section a:hover{
+    background-color: #99B7F9;
+}

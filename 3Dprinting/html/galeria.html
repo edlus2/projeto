@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing</title>
+    <link rel="shortcut icon" href="img/p.inicial/favicon.ico" type="image/x-icon">
+    
+    <!--configuração da barra de menu css-->
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- configuração conteudo-->
+    <link rel="stylesheet" href="../css/p.galeria.css">
+
+    <!-- configuração footer-->
+    <link rel="stylesheet" href="../css/footer.css">
+
+</head>
+<body onload="loading()">
+    
+    <!--configuração Preload-->
+    <div class="boxload">
+        <div class="preload"></div>
+    </div>
+    <div class="carregando">
+
+        <!--configuração da barra de menu html-->
+        <header>
+            <div class="nav-bar">
+                <a href="../index.html" class="logo"><img src="img/p.inicial/logo.png" alt="logo do site" style="height: 90px;"></a>
+                <div class="navigation">
+                    <div class="nav-items">
+                        <i class="uil uil-times nav-close-btn"></i>
+                        <a href="../index.html"><i class="uil uil-home"></i> Home</a>
+                        <a href="modelo.html"><i class="uil uil-octagon"></i> Modelos</a>
+                        <a href="ajuda.html"><i class="uil uil-lightbulb-alt"></i> Ajuda</a>
+                        <a href="contato.html"><i class="uil uil-envelope"></i> Contato</a>
+                    </div>
+                </div>
+                <i class="uil uil-apps nav-menu-btn"></i>
+            </div>
+            <div class="scroll-indicator-container">
+                <div class="scroll-indicator-bar"></div>
+            </div>
+        </header>
+
+        <!--configuração do conteudo da pagina-->
+        <main>
+            <div>
+                <picture>
+                    <source media="(max-width: 550px)" srcset="img/p.galeria/galeriamobile.png" />
+                    <source media="(max-width: 950px)" srcset="img/p.galeria/galeriatablet.png" />
+                    <img src="img/p.galeria/galeriadesktop.png" alt="foto dos produtos ja feito" />
+                </picture> 
+            </div>
+
+            <!-- configuraçao divisao -->
+            <div id="colorido"></div>
+
+            <!-- configuraçao das imagens -->
+            <div class="img-container">
+                <h1>Imagens Galeria</h1>
+
+                <div class="imagem-container">
+                    <div class="image"><img src="img/p.galeria/1.jpg" alt="foto do Gremlins"></div>
+                    <div class="image"><img src="img/p.galeria/2.jpg" alt="foto do Michael Jackson"></div>
+                    <div class="image"><img src="img/p.galeria/3.jpg" alt="foto do mao com perna"></div>
+                    <div class="image"><img src="img/p.galeria/4.jpg" alt="foto do yoshi"></div>
+                    <div class="image"><img src="img/p.galeria/5.jpg" alt="foto da morte"></div>
+                    <div class="image"><img src="img/p.galeria/6.jpg" alt="foto do samurai"></div>
+                    <div class="image"><img src="img/p.galeria/7.jpg" alt="foto do dragao"></div>
+                    <div class="image"><img src="img/p.galeria/8.jpg" alt="foto do robo"></div>
+                    <div class="image"><img src="img/p.galeria/9.jpg" alt="foto do casal"></div>
+                    <div class="image"><img src="img/p.galeria/10.jpg" alt="foto do halloween"></div>
+                    <div class="image"><img src="img/p.galeria/11.jpg" alt="foto do vela"></div>
+                    <div class="image"><img src="img/p.galeria/12.jpg" alt="foto do fantasma"></div>
+                </div>
+
+                <div class="popup-img">
+                    <span>&times;</span>
+                    <img class="image" src="img/p.galeria/1.jpg" alt="foto dos personagem feito">
+                </div>
+            </div>
+        </main>    
+        
+        <!--configuraçao divisao -->
+        <div class="colorido"></div>
+
+        <!--configuraçao footer -->
+        <footer>
+            <div id="footer">
+                <div class="footerr">
+                    <img src="img/p.inicial/logo.png" alt="logo do site">
+                </div>
+                <div class="footer">
+                    <p>ATENDIMENTO O CLIENTE</p>
+                    <p><span>SAC - Horário de Atendimento:</span></p>
+                    <p>Seg. à Sex. <span>9:00h</span> às <span>18:00h</span></p>
+                    <p><span>Whatsapp:</span> 27 992489236</p>
+                    <p>Atendimento via email:</p>
+                    <p><span>E-mail:</span> 3d.impressoesltda@gmail.com </p>
+                </div>
+                <div class="footer central">
+                    <p>Siga-nos</p>
+                    <a target="_blank" href="https://instagram.com/3d.printingltda?igshid=ZDdkNTZiNTM="><i class="uil uil-instagram-alt"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100092244554681&mibextid=ZbWKwL"><i class="uil uil-facebook"></i></a>
+                    <a target="_blank" href="https://github.com/edlus2"><i class="uil uil-github-alt"></i></a>
+                    <br><br>
+                    <p>&copy; 2023 3D Printing. Todos os direitos reservados.</p>
+                    <p>CNPJ: 00.000.000/0000-00</p>
+                    <p>R IGUATEMI, 712  - VILA NOVA DE COLARES/ES</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!--configuração java da barra menu-->
+    <script src="../js/menu.js"></script>
+
+    <!--configuração java popup das imagens-->
+    <script src="../js/popup.js"></script>
+
+    <!--configuração java preload-->
+    <script src="../js/preload.js"></script>
+
+</body>
+</html>

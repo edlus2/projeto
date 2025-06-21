@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing</title>
+    <link rel="shortcut icon" href="img/p.inicial/favicon.ico" type="image/x-icon">
+    
+    <!--configuração da barra de menu css-->
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- configuração conteudo-->
+    <link rel="stylesheet" href="../css/p.contato.css">
+
+    <!-- configuração footer-->
+    <link rel="stylesheet" href="../css/footer.css">
+
+</head>
+<body onload="loading()">
+
+    <!--configuração Preload-->
+    <div class="boxload">
+        <div class="preload"></div>
+    </div>
+    <div class="carregando">
+
+        <!--configuração da barra de menu html-->
+        <header>
+            <div class="nav-bar">
+                <a href="../index.html" class="logo"><img src="img/p.inicial/logo.png" alt="logo do site" style="height: 90px;"></a>
+                <div class="navigation">
+                    <div class="nav-items">
+                        <i class="uil uil-times nav-close-btn"></i>
+                        <a href="../index.html"><i class="uil uil-home"></i> Home</a>
+                        <a href="modelo.html"><i class="uil uil-octagon"></i> Modelos</a>
+                        <a href="galeria.html"><i class="uil uil-images"></i> Galeria</a>
+                        <a href="ajuda.html"><i class="uil uil-lightbulb-alt"></i> Ajuda</a>
+                    </div>
+                </div>
+                <i class="uil uil-apps nav-menu-btn"></i>
+            </div>
+            <div class="scroll-indicator-container">
+                <div class="scroll-indicator-bar"></div>
+            </div>
+        </header>
+        
+        <!--configuração do conteudo da pagina-->
+        <main id="modelo">
+            <div>
+                <picture>
+                    <source media="(max-width: 550px)" srcset="img/p.contato/contatomobile.png" />
+                    <source media="(max-width: 950px)" srcset="img/p.contato/contatotablet.png" />
+                    <img src="img/p.contato/contatodesktop.png" alt="pagina contato com a imagem de um telefone" />
+                </picture> 
+            </div>
+            
+            <!--configuraçao divisao -->
+            <div id="colorido"></div>
+
+            <!--configuraçao do conteudo -->
+            <section>
+
+                <div class="contato">
+                    <h1>Entre em Contato</h1>
+                    <h2>Telefone:<span>(27)9 9248-9236</span><a target="_blank" href="https://web.whatsapp.com/"><i class="uil  uil-whatsapp"></a></i></h2>
+                    <h2>E-mail:<span>3d.impressoesltda@gmail.com</span><a target="_blank" href="https://gmail.com"><i class="email uil-envelope"></i></a></h2>
+                </div>
+
+                <div class="formulario">
+                    <h2>Mande sua mensagem</h2>
+                    <form action="https://formsubmit.co/3d.impressoesltda@gmail.com" method="POST">
+                        <div class="oculto">
+                            <input type="text" class="text" name="Contato">
+                        </div>
+                        <div class="form">
+                            <label for="Nome">Nome</label>
+                            <input type="text" name="Nome" class="text" id="Nome" placeholder="Nome" autocomplete="name" required>
+                        </div>
+                        <div class="form">
+                            <label for="">E-mail</label>
+                            <input type="email" name="E-mail" class="text" id="E-mail" autocomplete="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="form">
+                            <label for="">Mensagem<br></label>
+                            <textarea class="text" name="Mensagem" id="Mensagem" cols="30" rows="10" placeholder="Escreva Sua Mensagem" required></textarea>
+                        </div>
+                        <div>
+                            <input type="hidden" name="_next" value="https://edlus2.github.io/3Dprinting/html/obrigado.html">
+                        </div>
+                        <div>
+                            <input type="hidden" name="_captcha" value="false">
+                        </div>
+                        <div class="botao">
+                            <input type="submit" value="ENVIAR">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="mapa">
+                    <h2>Localização</h2>
+                    <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14979.695812403757!2d-40.2072168!3d-20.1788916!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81d096b49b11d%3A0xa7595a681ac9bff9!2s3D%20Printing%20Action!5e0!3m2!1spt-BR!2sbr!4v1683486025910!5m2!1spt-BR!2sbr" width="800" height="450" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                </div>
+            </section>
+        </main>
+
+        <!--configuraçao divisao -->
+        <div class="colorido"></div>
+
+        <!--configuraçao footer -->
+        <footer>
+            <div id="footer">
+                <div class="footerr">
+                    <img src="img/p.inicial/logo.png" alt="logo do site">
+                </div>
+                <div class="footer">
+                    <p>ATENDIMENTO O CLIENTE</p>
+                    <p><span>SAC - Horário de Atendimento:</span></p>
+                    <p>Seg. à Sex. <span>9:00h</span> às <span>18:00h</span></p>
+                    <p><span>Whatsapp:</span> 27 992489236</p>
+                    <p>Atendimento via email:</p>
+                    <p><span>E-mail:</span> 3d.impressoesltda@gmail.com </p>
+                </div>
+                <div class="footer central">
+                    <p>Siga-nos</p>
+                    <a target="_blank" href="https://instagram.com/3d.printingltda?igshid=ZDdkNTZiNTM="><i class="uil uil-instagram-alt"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100092244554681&mibextid=ZbWKwL"><i class="uil uil-facebook"></i></a>
+                    <a target="_blank" href="https://github.com/edlus2"><i class="uil uil-github-alt"></i></a>
+                    <br><br>
+                    <p>&copy; 2023 3D Printing. Todos os direitos reservados.</p>
+                    <p>CNPJ: 00.000.000/0000-00</p>
+                    <p>R IGUATEMI, 712  - VILA NOVA DE COLARES/ES</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!--configuração java da barra menu-->
+    <script src="../js/menu.js"></script> 
+
+    <!--configuração java preload-->
+    <script src="../js/preload.js"></script>
+
+</body>
+</html>

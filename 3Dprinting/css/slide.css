@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+*,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  .slide  {
+    text-decoration: none;
+    color: inherit;
+  }
+  .slide-btn {
+    display: none;
+  }
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+  } 
+  /*======= configuracao h1 do slide =======*/
+  .slide {
+    float: left;
+    height: 100%;
+    width: 0;
+    transition: width .3s linear;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .slide > * {
+    transition: transform .15s linear;
+    transform: scale(0);
+  }
+  .labels {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .labels label {
+    display: inline-block;
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin: .5vmin 2vmin;
+    border: 3px solid rgb(255, 255, 255);
+  }
+  .carousel .one,
+  .carousel .two,
+  .carousel .three {
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .carousel .one {
+    background-position: right center;
+    background-image: url(../html/img/p.inicial/slide1.jpg);
+  }
+  .carousel .two {
+    background-position: right center;
+    background-image: url(../html/img/p.inicial/slide2.jpg);
+  }
+  .carousel .three {
+    background-position: right center;
+    background-image: url(../html/img/p.inicial/slide3.jpg);
+  }
+  #slide-btn-1:checked ~ .one,
+  #slide-btn-2:checked ~ .two,
+  #slide-btn-3:checked ~ .three {
+    width: 100%;
+  }
+  #slide-btn-1:checked ~ .one > *,
+  #slide-btn-2:checked ~ .two > *,
+  #slide-btn-3:checked ~ .three > * {
+    transform: scale(1);
+  }
+  #slide-btn-1:checked ~ .labels label[for="slide-btn-1"],
+  #slide-btn-2:checked ~ .labels label[for="slide-btn-2"],
+  #slide-btn-3:checked ~ .labels label[for="slide-btn-3"] {
+    background-color: rgb(255, 255, 255);
+  }
+  .credit{
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.credit a{
+    text-decoration: none;
+    color:#ffffff;
+    font-weight: bold;
+}

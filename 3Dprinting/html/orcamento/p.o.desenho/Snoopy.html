@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing</title>
+    <link rel="shortcut icon" href="../../img/p.inicial/favicon.ico" type="image/x-icon">
+
+    <!--configuração da barra de menu css-->
+    <link rel="stylesheet" href="../../../css/menu.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--configuração da pagina css-->
+    <link rel="stylesheet" href="../../../css/paginasmodelo.css">
+
+</head>
+
+<body>
+     <!--configuração da barra de menu html-->
+     <header>
+        <div class="nav-bar">
+            <a href="../../../index.html" class="logo"><img src="../../img/p.inicial/logo.png" alt="logo do site" style="height: 90px;"></a>
+            <div class="navigation">
+                <div class="nav-items">
+                    <i class="uil uil-times nav-close-btn"></i>
+                    <a href="../../modelo.html"><i class="uil uil-octagon"></i> Modelos</a>
+                    <a href="../../galeria.html"><i class="uil uil-images"></i> Galeria</a>
+                    <a href="../../contato.html"><i class="uil uil-envelope"></i> Contato </a>
+                    <a href="../../ajuda.html"><i class="uil uil-lightbulb-alt"></i> Ajuda</a>
+                </div>
+            </div>
+            <i class="uil uil-apps nav-menu-btn"></i>
+        </div>
+        <div class="scroll-indicator-container">
+            <div class="scroll-indicator-bar"></div>
+        </div>
+    </header>
+
+    <main class="orcdesenho geral">
+        <div class="tit">
+            <h1>Orçamento</h1>
+        </div>
+
+        <section id="orcamento">
+            <div class="infororcamento">
+                <div class="conted">
+                    <h3>Snoopy</h3>
+                    <p>Snoopy nasceu no dia 2 de outubro de 1950, na tirinha dos “Peanuts” (traduzida no Brasil como “Minduim”). Seu nome é uma mistura dos dois cachorros que seu criador, o cartunista norte-americano Charles M. Schulz (1922-2000), teve na infância, “Spike” e “Snooky”.</p>
+                </div>
+                <div>
+                    <a target="_blank" href="aba3d/Snoopy.html"> 
+                        <img src="../../img/p.modelo/p.desenho/Snoopy.jpg" alt="Snoopy">
+                        <p>Clique na imagem para ver em 3D</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="formulario">
+                <h2>formulario</h2>
+                <form action="https://formsubmit.co/3d.impressoesltda@gmail.com" method="POST">
+                    <div class="oculto">
+                        <input type="text" class="text" id="inome" name="Personagem Desenho" value="Snoopy">
+                    </div>
+                    <div class="form">
+                        <label for="Nome">Nome</label>
+                        <input type="text" name="Nome" class="text" id="Nome" placeholder="Nome" required autocomplete="name">
+                    </div>
+                    <div class="form">
+                        <label for="Email">E-mail</label>
+                        <input type="email" name="E-mail" class="text" id="Email" placeholder="E-mail" required autocomplete="email">
+                    </div>
+                    <div class="form">
+                        <label for="itel">Telefone</label>
+                        <input type="tel" name="Telefone" class="text" id="itel" placeholder="(27) 99999-9999" minlength="8" maxlength="12" required autocomplete="tel">
+                    </div>
+                    <div class="form">
+                        <label for="itam1 itam2 itam3 itam4">Tamanho Do Personagem : </label>
+                        <input type="radio" name="Tamanho" id="itam1" value="20">
+                        <label for="itam1">20CM📏</label>
+                        <input type="radio" name="Tamanho" id="itam2" value="25">
+                        <label for="itam2"> 25CM📏</label>
+                        <input type="radio" name="Tamanho" id="itam3" value="30">
+                        <label for="itam3"> 30CM📏</label>
+                        <input type="radio" name="Tamanho" id="itam4" value="40">
+                        <label for="itam4"> 40CM📏</label>
+                    </div>
+                    <div class="form">
+                        <label for="Mensagem">Mensagem<br></label>
+                        <textarea class="text" name="Mensagem" id="Mensagem" cols="30" rows="10" placeholder="Escreva Sua Mensagem ..." ></textarea>
+                    </div>
+                    <div>
+                        <input type="hidden" name="_next" value="https://edlus2.github.io/3Dprinting/html/obrigado.html">
+                    </div>
+                    <div>
+                        <input type="hidden" name="_captcha" value="false">
+                    </div>
+                    <div class="botao">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpar">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!--configuração java scroll-->
+    <script type="text/javascript" src="../../../js/scroll.js"></script>
+
+    <!--configuração java da barra menu-->
+    <script src="../../../js/menu.js"></script>
+</body>
+
+</html>

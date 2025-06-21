@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing</title>
+    <link rel="shortcut icon" href="img/p.inicial/favicon.ico" type="image/x-icon">
+    
+    <!--configuração da barra de menu css-->
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- configuração conteudo-->
+    <link rel="stylesheet" href="../css/p.ajuda.css">
+
+    <!-- configuração footer-->
+    <link rel="stylesheet" href="../css/footer.css">
+
+</head>
+<body onload="loading()">
+
+    <!--configuração Preload-->
+    <div class="boxload">
+        <div class="preload"></div>
+    </div>
+    <div class="carregando">
+
+        <!--configuração da barra de menu html-->
+        <header>
+            <div class="nav-bar">
+                <a href="../index.html" class="logo"><img src="img/p.inicial/logo.png" alt="logo do site" style="height: 90px;"></a>
+                <div class="navigation">
+                    <div class="nav-items">
+                        <i class="uil uil-times nav-close-btn"></i>
+                        <a href="../index.html"><i class="uil uil-home"></i> Home</a>
+                        <a href="modelo.html"><i class="uil uil-octagon"></i> Modelos</a>
+                        <a href="galeria.html"><i class="uil uil-images"></i> Galeria</a>
+                        <a href="contato.html"><i class="uil uil-envelope"></i> Contato</a>
+                    </div>
+                </div>
+                <i class="uil uil-apps nav-menu-btn"></i>
+            </div>
+            <div class="scroll-indicator-container">
+                <div class="scroll-indicator-bar"></div>
+            </div>
+        </header>
+
+        <!--configuração do conteudo da pagina-->
+        <main id="modelo">
+            <div>
+                <picture>
+                    <source media="(max-width: 550px)" srcset="img/p.ajuda/ajudamobile.png" />
+                    <source media="(max-width: 950px)" srcset="img/p.ajuda/ajudatablet.png" />
+                    <img src="img/p.ajuda/ajudadesktop.png" alt="imagem de ajuda com o chapolim colorado" />
+                </picture> 
+            </div>
+        
+            <!--configuraçao divisao -->
+            <div id="colorido"></div>
+
+            <!--configuraçao das perguntas -->
+            <div class="conteiner">
+                <div class="conteudo">
+                    <h1>PERGUNTAS FREQUENTES</h1>
+
+                    <div class="box">
+                        <input type="checkbox" class="click" id="impressora">
+                        <div class="perguntas">
+                            <label for="impressora">
+                                <h2>O que é uma impressora 3D?</h2>
+                            </label>
+                            <p>A impressora 3D (processo de prototipagem rápida) é uma ferramenta que permite reproduzir objetos em três dimensões, sendo a impressão de modelos por meio da fabricação aditiva. A funcionalidade trouxe praticidade, isso porque entrega uma versão de teste de qualquer produto como “protótipo”.</p>
+                        </div>
+                    </div> 
+
+                    <div class="box">
+                        <input type="checkbox" class="click" id="tempo">    
+                        <div class="perguntas">
+                            <label for="tempo">
+                                <h2>Quanto tempo demora uma impressão 3D?</h2>
+                            </label>
+                            <p>Depende muito do tamanho do objeto e dos níveis de detalhes. Portanto, esse processo por demorar minutos ou até horas.</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <input type="checkbox" class="click" id="material">                
+                        <div class="perguntas">
+                            <label for="material">
+                                <h2>Que materiais a impressora 3D usa para funcionar?</h2>
+                                <p>Os principais materiais usados como matéria-prima são:</p>
+                                <ul>
+                                    <li>◼️ <span>Plásticos;</span></li>
+                                    <li>◼️ <span>Metais;</span></li>
+                                    <li>◼️ <span>Cerâmica e outros.</span></li>
+                                </ul>
+                                <p>Mais a nossa empresa trabalha somente com o mateias de Plástico.</p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <input type="checkbox" class="click" id="valor">
+                        <div class="perguntas">
+                            <label for="valor">
+                                <h2>Quando custa uma impressora 3D em média?</h2>
+                            </label>
+                            <p>Quer saber o preço de uma impressora 3D? Há modelos diversos para todos os gostos e bolsos, elas podem criar peças pequenas e até coisas grandiosas, como casas e prédios.</p>
+
+                            <p> Em média, os valores variam entre <span>R$ 500</span> a <span>R$ 200.000.</span></p>
+                        </div>
+                    </div> 
+
+                    <div class="box">
+                        <input type="checkbox" class="click" id="possivel">
+                        <div class="perguntas">
+                            <label for="possivel">
+                                <h2>O que é possível imprimir numa impressora 3D?</h2>
+                            </label>
+                            <p>Inicialmente esta tecnologia foi amplamente utilizada para a criação de protótipos.</p> <p>Com o avanço da tecnologia, as impressoras 3D possuem atualmente a capacidade de criar qualquer objeto e inclusive está sendo utilizada em escala industrial, auxiliando na produção de carros, casas e próteses humanas.</p>
+                        </div>
+                    </div> 
+
+                    <div class="box">
+                        <input type="checkbox" class="click" id="cores">
+                        <div class="perguntas">
+                            <label for="cores">
+                                <h2>É possível imprimir com cores? </h2>
+                            </label>
+                            <p>Sim, já existe a possibilidade da impressão 3D em cores.</p>
+
+                            <p>Uma forma mais simples é a substituição dos filamentos de acordo com a cor desejada, o que nem sempre pode gerar os melhores resultados.</p>
+                                
+                            <p>Algumas impressoras ainda possuem dois extrusoras o que permite alternar os filamentos de modo mais fácil.</p> 
+                                
+                            <p>As impressoras que fazem a sinterização a laser são as melhores nesse quesito pois podem variar a cor da camada durante a impressão 3D.</p>
+
+                            <p><span>Lembrando existe a possibilidade, mais trabalhamos com pintura feita a mão.</span></p>
+                        </div>
+                    </div> 
+
+                    <div class="box">
+                        <input type="checkbox" class="click" id="direito">
+                        <div class="perguntas">
+                            <label for="direito">
+                                <h2>E os direitos autorais dos objetos que são impressos?</h2>
+                            </label>
+                            <p>A questão dos direitos autorais ainda continua a mesma quando considerada a propriedade, seja com a fabricação de uma impressão 3D ou modelando com farinha e agua.</p>
+
+                            <p>Um boneco de um filme para colocar na estante da sala ou na mesa de trabalho dificilmente irá gerar algum tipo de processo, enquanto a fabricação e venda de um modelo de um herói do filme idêntico ao vendido na loja pode sim causar problemas.</p> 
+
+                            <p>Nestas horas é sempre importante o bom senso antes de pensar em realizar uma impressão 3D de um modelo que não seja próprio.</p>
+
+                            <p><span>Com isso a nossa empresa sempre busca cria novos modelos, ou estar comprando modelos de empresas com a licença de comércio.</span></p>
+                        </div>
+                    </div> 
+
+                </div>
+            </div>
+
+            <!--configuraçao de email -->
+
+            <div id="formulario">  
+                <h2>Caso tenha dúvidas</h2>
+                <p>Mande sua pergunta!</p> 
+                <div class="formulario">
+                    <form action="https://formsubmit.co/3d.impressoesltda@gmail.com" method="POST">
+                        <div class="oculto">
+                            <input type="text" class="text" name="Ajuda">
+                        </div>
+                        <div class="form">
+                            <label for="Nome">Nome</label>
+                            <input type="text" name="Nome" class="text" id="Nome" placeholder="Nome" autocomplete="name" required>
+                        </div>
+                        <div class="form">
+                            <label for="">E-mail</label>
+                            <input type="email" name="E-mail" class="text" id="E-mail" autocomplete="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="form">
+                            <label for="">Mensagem<br></label>
+                            <textarea class="text" name="Mensagem" id="Mensagem" cols="30" rows="10" placeholder="Escreva Sua Mensagem" required></textarea>
+                        </div>
+                        <div>
+                            <input type="hidden" name="_next" value="https://edlus2.github.io/3Dprinting/html/obrigado.html">
+                        </div>
+                        <div>
+                            <input type="hidden" name="_captcha" value="false">
+                        </div>
+                        <div class="botao">
+                            <input type="submit" value="ENVIAR">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+        <!--configuraçao divisao -->
+        <div class="colorido"></div>
+
+        <!--configuraçao footer -->
+        <footer>
+            <div id="footer">
+                <div class="footerr">
+                    <img src="img/p.inicial/logo.png" alt="logo do site">
+                </div>
+                <div class="footer">
+                    <p>ATENDIMENTO O CLIENTE</p>
+                    <p><span>SAC - Horário de Atendimento:</span></p>
+                    <p>Seg. à Sex. <span>9:00h</span> às <span>18:00h</span></p>
+                    <p><span>Whatsapp:</span> 27 992489236</p>
+                    <p>Atendimento via email:</p>
+                    <p><span>E-mail:</span> 3d.impressoesltda@gmail.com </p>
+                </div>
+                <div class="footer central">
+                    <p>Siga-nos</p>
+                    <a target="_blank" href="https://instagram.com/3d.printingltda?igshid=ZDdkNTZiNTM="><i class="uil uil-instagram-alt"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100092244554681&mibextid=ZbWKwL"><i class="uil uil-facebook"></i></a>
+                    <a target="_blank" href="https://github.com/edlus2"><i class="uil uil-github-alt"></i></a>
+                    <br><br>
+                    <p>&copy; 2023 3D Printing. Todos os direitos reservados.</p>
+                    <p>CNPJ: 00.000.000/0000-00</p>
+                    <p>R IGUATEMI, 712  - VILA NOVA DE COLARES/ES</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--configuração java da barra menu-->
+    <script src="../js/menu.js"></script> 
+
+    <!--configuração java preload-->
+    <script src="../js/preload.js"></script>
+
+</body>
+</html>
