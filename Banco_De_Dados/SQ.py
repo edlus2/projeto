@@ -28,7 +28,7 @@ processo_seletivo.execute('''
     CREATE TABLE IF NOT EXISTS SELECAO_CANDIDATO(
         ID_CANDIDATO INTEGER PRIMARY KEY AUTOINCREMENT,
         NME_CANDIDATO TEXT,
-        DAT_INSCRICAO TIMESTAMP DEFAULT CURRENT_TIMESTAM
+        DAT_INSCRICAO TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )                 
     ''')
 
@@ -68,3 +68,6 @@ processo_seletivo.execute('''
     )                 
     ''')
 
+cursor.execute("INSERT INTO SELECAO_CANDIDATO (NME_CANDIDATO) VALUES (?)", ('edgar',))
+
+processo_seletivo.commit()
