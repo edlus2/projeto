@@ -8,11 +8,12 @@ processo_seletivo = sqlite3.connect('Processo.db')
 cursor = processo_seletivo.cursor()
 
 # 1 VAMOS CRIAR A SELEÇÃO DE CANDIDATO E JA INCLUIR AS COLUNAS E TIPOS DE CADA
+#subtrair 3 horas do horário. O sistema puxa o Horário Universal (UTC), mas o fuso horário brasileiro é UTC-3.
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS SELECAO_CANDIDATO(
         ID_CANDIDATO INTEGER PRIMARY KEY AUTOINCREMENT,
         NME_CANDIDATO TEXT,
-        DAT_INSCRICAO TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        DAT_INSCRICAO TEXT DEFAULT (strftime('%d/%m/%Y %H:%M:%S', 'now', '-3 hours'))
     )                 
 ''')
 
@@ -45,7 +46,7 @@ def gerar_fibonacci(n):
     return fibonacci[1:]  # Removendo 0 do inicio para comerça por 1
 
 # Gerar os 30 primeiros números da sequência de Fibonacci
-fibonacci_sequence = gerar_fibonacci(30)
+fibonacci_sequence = gerar_fibonacci(31)
 
 # Inserir os números de Fibonacci na tabela SELECAO_TESTE
 for num in fibonacci_sequence:
