@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Diploma - Edgar da Silva Peixoto</title>
+    <link rel="stylesheet" href="/diplo/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <div class="header-left">
+                    <div class="logo">abaris</div>
+                </div>
+                <div class="header-right">
+                    <span>Português</span>
+                </div>
+            </div>
+            <div class="person-name-section">
+                <div class="user-name">Edgar da Silva Peixoto</div>
+                <div class="diploma-status">Status do Diploma: <span class="status-button">ATIVO</span></div>
+            </div>
+        </header>
+
+        <div class="top-student-info">
+            <div id="alunoInfoContent" class="aluno-info-content">
+                <div class="aluno-info-grid">
+                    <p><strong>Nacionalidade:</strong> Brasileira</p>
+                    <p><strong>Naturalidade:</strong> VILA VELHA</p>
+                    <p><strong>Código:</strong> 2028150 UF: ES</p>
+                    <p><strong>CPF:</strong> 154XXXXXXX-XX</p>
+                    <p><strong>RG:</strong> ES 35XXXXXX SPTC</p>
+                    <p><strong>Data de Nascimento:</strong> 09/07/1996</p>
+                    <p><strong>Sexo:</strong> Masculino</p>
+                </div>
+            </div>
+            <button id="toggleAlunoInfo" class="toggle-button"></button>
+        </div>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <h3 id="sidebarToggle">Dados do Diploma <button class="sidebar-toggle-button"></button></h3>
+                <div class="sidebar-content">
+                    <p>ID: (Dip000000000000000000000000000000000040<br>002126899)</p>
+                    <p><strong>Data de Conclusão:</strong> 03/08/2023</p>
+                    <p><a href="#" id="openIESModal">Ver Dados da IES Emissora</a></p>
+                    <p><a href="#" id="openCursoModal">Ver Dados do Curso</a></p>
+                    <p><a href="#" id="openRegistroModal">Ver Dados do Registro</a></p>
+                    <button class="btn-download">Baixar PDF do diplomado</button>
+                    <button class="btn-download">Baixar XML do diplomado</button>
+                </div>
+            </aside>
+
+            <main class="pdf-viewer-area">
+                <iframe src="/diplo/thiago.pdf" width="100%" height="700px" style="border: none;"></iframe>
+            </main>
+        </div>
+    </div>
+
+    <div id="modalIES" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="modalIES">&times;</span>
+            <h2 class="modal-title">Dados da IES Emissora</h2>
+            <div class="modal-body-columns">
+                <div class="modal-column">
+                    <p><strong>Nome:</strong> Faculdade Multivix Serra</p>
+                    <p><strong>Código MEC:</strong> 1238</p>
+                    <p><strong>CNPJ:</strong> 105924000000148</p>
+                    <p><strong>Endereço:</strong></p>
+                    <p><strong>Logradouro:</strong> RUA BARÃO DO RIO BRANCO</p>
+                    <p><strong>Número:</strong> 120</p>
+                    <p><strong>Bairro:</strong> Colina de Laranjeiras</p>
+                    <p><strong>CEP:</strong> 29167-172</p>
+                    <p><strong>Município:</strong> Serra</p>
+                    <p><strong>Código do Município:</strong> 3205002</p>
+                    <p><strong>UF:</strong> ES</p>
+                </div>
+                <div class="modal-column">
+                    <p><strong>Dados Mantenedora</strong></p>
+                    <p><strong>Razão Social:</strong> Multivix Serra – Ensino Pesquisa e Extensao Ltda</p>
+                    <p><strong>CNPJ:</strong> 10592400000148</p>
+                    <p><strong>Endereço:</strong></p>
+                    <p><strong>Logradouro:</strong> RUA BARÃO DO RIO BRANCO</p>
+                    <p><strong>Número:</strong> 120</p>
+                    <p><strong>Bairro:</strong> Colina de Laranjeiras</p>
+                    <p><strong>CEP:</strong> 29167-172</p>
+                    <p><strong>Município:</strong> Serra</p>
+                    <p><strong>Código do Município:</strong> 3205002</p>
+                    <p><strong>UF:</strong> ES</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <p><strong>Credenciamento:</strong></p>
+                    <p><strong>Tipo:</strong> Portaria</p>
+                    <p><strong>Número:</strong> 767</p>
+                    <p><strong>Data:</strong> 22/06/2007</p>
+                    <p><strong>Seção:</strong> 1</p>
+                    <p><strong>Página:</strong> 18</p>
+                    <p><strong>Data de Publicação:</strong> 23/06/2007</p>
+                    <p><strong>Número do DOU:</strong> 119</p>
+                </div>
+                <button class="close-button-footer" data-modal="modalIES">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalCurso" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="modalCurso">&times;</span>
+            <h2 class="modal-title">Dados do Curso</h2>
+            <div class="modal-body-columns">
+                <div class="modal-column">
+                    <p><strong>Nome Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
+                    <p><strong>Código Curso EMEC:</strong> 1193371</p>
+                    <p><strong>Título Conferido:</strong> Tecnólogo</p>
+                    <p><strong>Grau Conferido:</strong> Tecnólogo</p>
+                    <p><strong>Endereço do Curso:</strong></p>
+                    <p><strong>Logradouro:</strong> RUA BARÃO DO RIO BRANCO</p>
+                    <p><strong>Número:</strong> 120</p>
+                    <p><strong>Bairro:</strong> Colina de Laranjeiras</p>
+                    <p><strong>CEP:</strong> 29167-172</p>
+                    <p><strong>Município:</strong> Serra</p>
+                    <p><strong>Código do Município:</strong> 3205002</p>
+                    <p><strong>UF:</strong> ES</p>
+                </div>
+                <div class="modal-column">
+                    <p><strong>Polo:</strong></p>
+                    <p><strong>Nome:</strong> (71) - Serra, Multivix</p>
+                    <p><strong>Código EMEC:</strong> 6740340</p>
+                    <p><strong>Logradouro:</strong> Av. Civit de Rio Branco</p>
+                    <p><strong>Número:</strong> 120</p>
+                    <p><strong>Bairro:</strong> Colina de Laranjeiras</p>
+                    <p><strong>CEP:</strong> 29167-172</p>
+                    <p><strong>Município:</strong> Serra</p>
+                    <p><strong>Código do Município:</strong> 3205002</p>
+                    <p><strong>UF:</strong> ES</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <p><strong>Autorização:</strong></p>
+                    <p><strong>Tipo:</strong> Portaria</p>
+                    <p><strong>Número:</strong> 5</p>
+                    <p><strong>Data:</strong> 03/08/2018</p>
+                    <p><strong>Veículo Publicação:</strong> DOU</p>
+                    <p><strong>Seção:</strong> 1</p>
+                    <p><strong>Página:</strong> 118</p>
+                    <p><strong>Data de Publicação:</strong> 23/06/2007</p>
+                    <p><strong>Número do DOU:</strong> 119</p>
+                    <p><strong>Reconhecimento:</strong></p>
+                    <p><strong>Tipo:</strong> Portaria</p>
+                    <p><strong>Número:</strong> 372</p>
+                    <p><strong>Data:</strong> 28/07/2022</p>
+                    <p><strong>Veículo de Publicação:</strong> DOU</p>
+                    <p><strong>Seção:</strong> 1</p>
+                    <p><strong>Página:</strong> 178</p>
+                    <p><strong>Data de Publicação:</strong> 29/07/2022</p>
+                    <p><strong>Número do DOU:</strong> 144</p>
+                </div>
+                <button class="close-button-footer" data-modal="modalCurso">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalRegistro" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="modalRegistro">&times;</span>
+            <h2 class="modal-title">Dados do Registro</h2>
+            <div class="modal-body-columns">
+                <div class="modal-column">
+                    <p><strong>ID do Registro:</strong> 0000000000000000000040</p>
+                    <p><strong>Número do Registro:</strong> 00288989</p>
+                    <p><strong>ID Documentação Acadêmica:</strong> PEDG0000000000000000000000000000000000012989</p>
+                    <p><strong>ID da IES Registradora:</strong></p>
+                    <p><strong>Nome:</strong> UNIVERSIDADE PROFESSOR ANTÔNIO DE M. FILHO</p>
+                    <p><strong>Código MEC:</strong> 30</p>
+                    <p><strong>CNPJ:</strong> 178954000199</p>
+                    <p><strong>Endereço:</strong></p>
+                    <p><strong>Logradouro:</strong> RODOVIA MG 176 - KM 0 - CÂMPUS UNIVERSITÁRIO</p>
+                    <p><strong>Número:</strong> 0</p>
+                    <p><strong>CEP:</strong> 37110-440</p>
+                    <p><strong>Bairro:</strong> TREVO</p>
+                    <p><strong>Município:</strong> ALFENAS</p>
+                    <p><strong>Código do Município:</strong> 3101607</p>
+                    <p><strong>UF:</strong> MG</p>
+                </div>
+                <div class="modal-column">
+                    <p><strong>Dados do Livro de Registro:</strong></p>
+                    <p><strong>Livro de Registro:</strong> 031</p>
+                    <p><strong>Processo do Diploma:</strong> 25476</p>
+                    <p><strong>Data de Colação de Grau:</strong> 03/08/2023</p>
+                    <p><strong>Data de Expedição do Diploma:</strong> 29/08/2023</p>
+                    <p><strong>Data do Registro do Diploma:</strong> 05/10/2023</p>
+                    <p><strong>Número do Registro no Diploma:</strong> 12/22</p>
+                    <p><strong>Responsável Registro:</strong></p>
+                    <p><strong>Nome:</strong> PATRÍCIA CAROLINA DE SOUZA</p>
+                    <p><strong>CPF:</strong> 01954799882</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <p><strong>Credenciamento:</strong></p>
+                    <p><strong>Tipo:</strong> Portaria</p>
+                    <p><strong>Número:</strong> 515</p>
+                    <p><strong>Data:</strong> 15/10/2018</p>
+                    <p><strong>Página:</strong> 014</p>
+                    <p><strong>Data de Publicação:</strong> 15/10/2018</p>
+                </div>
+                <button class="close-button-footer" data-modal="modalRegistro">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/diplo/script.js"></script>
+</body>
+</html>
