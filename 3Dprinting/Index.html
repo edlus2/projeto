@@ -9,9 +9,10 @@
         :root {
             --primary: #00d4ff;
             --secondary: #0055ff;
-            --dark: #0a0a0c;
-            --glass: rgba(255, 255, 255, 0.05);
-            --border: rgba(255, 255, 255, 0.1);
+            --accent: #7000ff;
+            --dark: #050507;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.08);
         }
 
         body {
@@ -20,13 +21,16 @@
             color: #ffffff;
             margin: 0;
             overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(112, 0, 255, 0.05) 0%, transparent 40%);
         }
 
-        /* Ajuste dos Links - Se estiverem na mesma pasta, use apenas o nome do arquivo */
+        /* HEADER E NAVEGAÇÃO CORRIGIDA */
         header {
-            background: rgba(10, 10, 12, 0.9);
-            backdrop-filter: blur(10px);
-            padding: 15px 0;
+            background: rgba(5, 5, 7, 0.85);
+            backdrop-filter: blur(15px);
+            padding: 20px 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -37,121 +41,131 @@
         nav {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
         }
 
         nav a {
             font-family: 'Orbitron', sans-serif;
-            color: #fff;
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            padding: 10px 20px;
-            border-radius: 4px;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            padding: 12px 25px;
+            border-radius: 8px;
             background: var(--glass);
             border: 1px solid var(--border);
-            transition: 0.3s;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         nav a:hover {
-            background: var(--primary);
-            color: #000;
-            box-shadow: 0 0 20px var(--primary);
+            color: #fff;
+            background: rgba(0, 212, 255, 0.1);
+            border-color: var(--primary);
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.3);
+            transform: scale(1.05);
         }
 
-        /* Hero Modernizado */
+        /* HERO SECTION */
         .hero {
-            height: 80vh;
+            height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0c 100%);
             text-align: center;
             padding: 0 20px;
         }
 
         .hero h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.5rem;
-            background: linear-gradient(to right, #fff, var(--primary));
+            font-size: clamp(2rem, 8vw, 4.5rem);
+            line-height: 1.1;
+            background: linear-gradient(135deg, #fff 30%, var(--primary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.2));
         }
 
-        /* Seção de Projetos em Destaque */
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        /* CARDS */
         .featured-work {
-            padding: 80px 20px;
+            padding: 100px 20px;
             max-width: 1200px;
             margin: auto;
         }
 
-        .section-title {
-            text-align: center;
-            font-family: 'Orbitron', sans-serif;
-            margin-bottom: 40px;
-            color: var(--primary);
-        }
-
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
 
         .card {
-            background: var(--glass);
+            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
             border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 25px;
-            transition: 0.4s;
+            border-radius: 24px;
+            padding: 40px;
+            transition: 0.5s;
             position: relative;
-            overflow: hidden;
         }
 
         .card:hover {
-            transform: translateY(-10px);
             border-color: var(--primary);
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateY(-15px) rotateX(5deg);
         }
 
         .card h3 {
             font-family: 'Orbitron', sans-serif;
-            margin-top: 0;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary);
         }
 
         .badge {
             display: inline-block;
-            padding: 5px 12px;
-            background: var(--secondary);
-            font-size: 0.7rem;
+            padding: 6px 16px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            font-size: 0.65rem;
+            font-weight: bold;
             border-radius: 50px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* Rodapé Industrial */
+        /* FOOTER */
         footer {
-            background: #050505;
-            padding: 60px 20px;
+            background: #020203;
+            padding: 80px 20px;
             border-top: 1px solid var(--border);
-            margin-top: 50px;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
             max-width: 1100px;
             margin: auto;
-            opacity: 0.7;
         }
 
-        .company-logo {
+        .footer-grid h4 {
             font-family: 'Orbitron', sans-serif;
-            color: #fff;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .footer-grid p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            line-height: 1.8;
         }
     </style>
 </head>
@@ -159,36 +173,35 @@
 
     <header>
         <nav>
-            <a href="modelo.html">Modelos</a>
-            <a href="galeria.html">Galeria</a>
-            <a href="orcamento.html">Orçamento</a>
-            <a href="ajuda.html">Ajuda</a>
+            <a href="html/modelo.html">Modelos</a>
+            <a href="html/galeria.html">Galeria</a>
+            <a href="html/orcamento.html">Orçamento</a>
+            <a href="html/ajuda.html">Ajuda</a>
         </nav>
     </header>
 
     <section class="hero">
-        <div class="badge">MANUFATURA ADITIVA 4.0</div>
+        <div class="badge" style="background: var(--glass); border: 1px solid var(--primary);">Estúdio Edgar Peixoto</div>
         <h1>STEEL CORE 3D</h1>
-        <p>Impressão de alta precisão, stencils industriais e acabamento artístico.</p>
+        <p>A união entre a engenharia de precisão e a arte dos colecionáveis. Especialistas em Godzilla e prototipagem industrial.</p>
     </section>
 
     <section class="featured-work">
-        <h2 class="section-title">Especialidades do Estúdio</h2>
         <div class="grid">
             <div class="card">
                 <div class="badge">Artístico</div>
-                <h3>Colecionáveis Kaiju</h3>
-                <p>Modelagem e pintura detalhada de figuras como Godzilla e criaturas pré-históricas com acabamento realista.</p>
+                <h3>Kaiju Studio</h3>
+                <p>Do fatiamento avançado à pintura manual. Trazemos o Godzilla e outras criaturas à vida com realismo extremo.</p>
             </div>
             <div class="card">
-                <div class="badge">Industrial</div>
-                <h3>Peças Técnicas</h3>
-                <p>Desenvolvimento de protótipos e peças finais em polímeros de alta resistência para o setor de óleo e gás.</p>
+                <div class="badge">Engenharia</div>
+                <h3>Indústria 4.0</h3>
+                <p>Projetos para Óleo e Gás. Produção de tubulações revestidas e peças técnicas com stencils de alta durabilidade.</p>
             </div>
             <div class="card">
-                <div class="badge">Software</div>
-                <h3>Otimização de Slicing</h3>
-                <p>Configurações avançadas em Cura, Bambu Studio e PrusaSlicer para volume negativo e suportes orgânicos.</p>
+                <div class="badge">Automação</div>
+                <h3>Slicing Inteligente</h3>
+                <p>Domínio total de volumes negativos e suportes em Cura e Bambu Studio para garantir zero desperdício.</p>
             </div>
         </div>
     </section>
@@ -196,21 +209,21 @@
     <footer>
         <div class="footer-grid">
             <div>
-                <div class="company-logo">STEEL CORE 3D</div>
-                <p>Líder em soluções de impressão 3D para o Distrito Industrial.</p>
+                <h4 style="font-size: 1.5rem;">STEEL CORE 3D</h4>
+                <p>Transformando polímeros em soluções industriais e arte colecionável.</p>
             </div>
             <div>
                 <h4>Localização</h4>
-                <p>Bloco B10 - Unidade Industrial<br>Serra, ES</p>
+                <p>Bloco B10 - Distrito Industrial<br>Serra, Espírito Santo</p>
             </div>
             <div>
-                <h4>Sistema</h4>
-                <p>Desenvolvido para integração via VS Code e Power Automate.</p>
+                <h4>Desenvolvedor</h4>
+                <p>Criado por Edgar da Silva Peixoto<br>Integrado via VS Code</p>
             </div>
         </div>
-        <p style="text-align:center; margin-top: 40px; font-size: 0.8rem; opacity: 0.5;">
-            © 2026 Edgar Peixoto. Todos os direitos reservados.
-        </p>
+        <div style="text-align:center; margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border); font-size: 0.8rem; color: rgba(255,255,255,0.3);">
+            © 2026 Steel Core 3D. Todos os direitos reservados.
+        </div>
     </footer>
 
 </body>
