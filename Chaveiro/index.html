@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaveiro Gagal | Residencial e Automotivo 24h</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        body { font-family: 'Outfit', sans-serif; scroll-behavior: smooth; }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            animation: pulse-green 2s infinite;
+        }
+
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        .service-card, .diff-card {
+            transition: all 0.4s ease;
+            background: #ffffff;
+            border: 1px solid #f1f5f9;
+        }
+
+        .service-card:hover, .diff-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #2563eb;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+        }
+
+        /* Controle do menu mobile */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <a href="https://wa.me/5527999999999" class="btn-whatsapp fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full flex items-center justify-center text-3xl text-white shadow-2xl transition hover:scale-110">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-key text-blue-600 text-2xl"></i>
+                <span class="text-2xl font-black text-slate-900 tracking-tighter uppercase">Gagal<span class="text-blue-600">Chaveiro</span></span>
+            </div>
+
+            <nav class="hidden md:flex gap-8 items-center font-bold text-sm text-slate-600">
+                <a href="#servicos" class="hover:text-blue-600 transition uppercase tracking-widest">Serviços</a>
+                <a href="#diferenciais" class="hover:text-blue-600 transition uppercase tracking-widest">Por que nós?</a>
+                <a href="#mapa" class="hover:text-blue-600 transition uppercase tracking-widest">Localização</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:5527999999999" class="bg-blue-600 text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-blue-700 transition flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i> LIGAR
+                </a>
+                <button id="menu-btn" class="md:hidden text-2xl text-slate-700 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-6 py-4">
+            <nav class="flex flex-col gap-4 font-bold text-slate-600 text-center uppercase tracking-wider">
+                <a href="#servicos" class="py-2 hover:bg-slate-50">Serviços</a>
+                <a href="#diferenciais" class="py-2 hover:bg-slate-50">Por que nós?</a>
+                <a href="#mapa" class="py-2 hover:bg-slate-50">Localização</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-bg pt-16 pb-24">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">
+                    📍 Atendimento em Serra e Região
+                </span>
+                <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-tight mb-6">
+                    Sua Chave Quebrou? <br> <span class="text-blue-600">Nós Resolvemos!</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-lg">
+                    Especialista em abertura de portas residenciais e veículos. Serviço rápido, limpo e com preço justo 24 horas por dia.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/5527999999999" class="bg-slate-900 text-white px-8 py-4 rounded-2xl text-center font-bold text-lg hover:bg-slate-800 transition">
+                        Chamar no WhatsApp
+                    </a>
+                    <a href="#servicos" class="bg-white border border-slate-200 px-8 py-4 rounded-2xl text-center font-bold text-lg hover:bg-slate-50 transition">
+                        Ver Serviços
+                    </a>
+                </div>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=1000" alt="Chaves" class="rounded-[3rem] shadow-2xl border-8 border-white" 
+                     alt="Chaveiro Profissional" 
+                     class="rounded-[2rem] shadow-2xl border-4 border-white bg-slate-200 min-h-[300px] object-cover">
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-slate-900 mb-4">Serviços Especializados</h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div data-aos="fade-up" class="service-card p-10 rounded-3xl">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-house-chimney text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600">Residencial</h3>
+                    <p class="text-slate-500 mb-6 font-medium">Abertura técnica de portas, troca de segredo, conserto de fechaduras e cópias de chaves comuns.</p>
+                    <ul class="space-y-3 text-sm font-bold text-slate-700">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Abertura de Portas</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Troca de Cilindros</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Instalação de Travas</li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="service-card p-10 rounded-3xl border-blue-100 bg-blue-50/30">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-200">
+                        <i class="fa-solid fa-car text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Automotivo</h3>
+                    <p class="text-slate-500 mb-6 font-medium">Abertura de veículos nacionais e importados, confecção de chaves e reparos em geral.</p>
+                    <ul class="space-y-3 text-sm font-bold text-slate-700">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Abertura de Carros</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Chaves Codificadas</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Extração de Chave Quebrada</li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="service-card p-10 rounded-3xl">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-key text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600">Serviços Gerais</h3>
+                    <p class="text-slate-500 mb-6 font-medium">Cópias de chaves para cadeados, portões, armários e cofres com precisão garantida.</p>
+                    <ul class="space-y-3 text-sm font-bold text-slate-700">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Cópias na Hora</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Chaves de Segurança</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Mestramento de Chaves</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="diferenciais" class="py-24 bg-white border-t border-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tighter italic">Por que nos escolher?</h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="diff-card p-10 rounded-[2.5rem]" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-bolt-lightning text-4xl text-blue-600 mb-6"></i>
+                    <h3 class="font-bold text-xl mb-3">Rapidez Total</h3>
+                    <p class="text-slate-500 text-sm">Atendimento imediato em até 20 minutos. Não deixamos você esperando.</p>
+                </div>
+                <div class="diff-card p-10 rounded-[2.5rem]" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-shield-halved text-4xl text-blue-600 mb-6"></i>
+                    <h3 class="font-bold text-xl mb-3">Segurança</h3>
+                    <p class="text-slate-500 text-sm">Profissional treinado para abrir sem causar nenhum dano à sua porta ou carro.</p>
+                </div>
+                <div class="diff-card p-10 rounded-[2.5rem]" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-credit-card text-4xl text-blue-600 mb-6"></i>
+                    <h3 class="font-bold text-xl mb-3">Pagamento Fácil</h3>
+                    <p class="text-slate-500 text-sm">Aceitamos todas as formas: Cartão de Crédito, Débito, PIX e Dinheiro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mapa" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-black text-slate-900 mb-6 italic">Onde Atendemos</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-location-dot text-blue-600 text-xl mt-1"></i>
+                        <p class="font-bold text-lg text-blue-600">Base Central: <br><span class="text-slate-500 font-medium text-base italic">Rua Exemplo, 123 - Centro, Serra - ES</span></p>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-clock text-blue-600 text-xl mt-1"></i>
+                        <p class="font-bold text-lg text-blue-600">Plantão: <br><span class="text-slate-500 font-medium text-base italic">Atendimento 24 Horas em toda Grande Vitória</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="h-80 lg:h-96 rounded-3xl overflow-hidden shadow-xl border-4 border-white" data-aos="fade-left">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119857.06240217036!2d-40.35515325!3d-20.1264356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb8185973956637%3A0x66c89c72e276495b!2sSerra%20-%20ES!5e0!3m2!1spt-BR!2sbr!4v1700000000000" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <span class="text-2xl font-black tracking-tighter uppercase mb-4 inline-block">Gagal<span class="text-blue-500">Chaveiro</span></span>
+            <p class="text-slate-500 text-sm italic mb-8 uppercase tracking-widest">© 2026 Edgar da Silva Peixoto | Chaveiro Gagal 24h</p>
+            <div class="flex justify-center gap-6 text-slate-400">
+                <a href="#" class="hover:text-blue-500 transition text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-blue-500 transition text-2xl"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Script para abrir/fechar o menu hambúrguer
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fecha o menu ao clicar em qualquer link (mobile)
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
