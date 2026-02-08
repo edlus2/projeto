@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axis Corporate | Seletor de Modelos</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .version-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .version-card:hover {
+            transform: translateY(-8px);
+            border-color: #4ebfff;
+            box-shadow: 0 20px 25px -5px rgba(78, 191, 255, 0.1), 0 10px 10px -5px rgba(78, 191, 255, 0.04);
+        }
+
+        .bg-axis-blue {
+            background-color: #4ebfff;
+        }
+
+        .text-axis-blue {
+            color: #4ebfff;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-100 py-8">
+        <div class="container mx-auto px-6 flex flex-col items-center text-center">
+            <div class="flex items-center space-x-3 mb-4">
+                <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center">
+                    <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 10L30 30M30 10L10 30" stroke="#4ebfff" stroke-width="4"/>
+                    </svg>
+                </div>
+                <div class="text-left">
+                    <h1 class="text-2xl font-black tracking-tighter leading-none">AXIS <span class="text-axis-blue">CORPORATE</span></h1>
+                    <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">Thiago Cremasco</p>
+                </div>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-800 mb-2">Apresentação de Modelos Web</h2>
+            <p class="text-gray-500 max-w-2xl italic">Selecione uma das opções abaixo para visualizar a proposta de layout e navegação para o seu novo portal corporativo.</p>
+        </div>
+    </header>
+
+    <!-- Main Selection Grid -->
+    <main class="container mx-auto px-6 py-16 flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            
+            <!-- V1: Corporativo Tradicional -->
+            <a href="V1/index.html" class="version-card bg-white p-8 rounded-3xl flex flex-col group">
+                <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-100 transition-colors">🏛️</div>
+                <h3 class="text-xl font-bold mb-2">Modelo 01</h3>
+                <p class="text-sm font-semibold text-axis-blue uppercase tracking-widest mb-4">Corporativo Tradicional</p>
+                <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                    Foco em solidez, confiança e uma estrutura clara. Ideal para uma imagem institucional robusta e direta.
+                </p>
+                <span class="text-sm font-bold flex items-center group-hover:translate-x-2 transition-transform">
+                    Visualizar Demo <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </span>
+            </a>
+
+            <!-- V2: Minimalista Editorial -->
+            <a href="V2/index.html" class="version-card bg-white p-8 rounded-3xl flex flex-col group">
+                <div class="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-gray-100 transition-colors">📄</div>
+                <h3 class="text-xl font-bold mb-2">Modelo 02</h3>
+                <p class="text-sm font-semibold text-axis-blue uppercase tracking-widest mb-4">Minimalista Editorial</p>
+                <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                    Design de alto impacto visual com foco em tipografia e espaços em branco. Transmite sofisticação e exclusividade.
+                </p>
+                <span class="text-sm font-bold flex items-center group-hover:translate-x-2 transition-transform">
+                    Visualizar Demo <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </span>
+            </a>
+
+            <!-- V3: Tech Bento Grid -->
+            <a href="v3/index.html" class="version-card bg-white p-8 rounded-3xl flex flex-col group border-axis-blue/20">
+                <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-100 transition-colors">🛰️</div>
+                <h3 class="text-xl font-bold mb-2">Modelo 03</h3>
+                <p class="text-sm font-semibold text-axis-blue uppercase tracking-widest mb-4">Moderno Tech</p>
+                <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                    Inspirado em dashboards de tecnologia e grids modulares. Ideal para mostrar inovação e precisão técnica.
+                </p>
+                <span class="text-sm font-bold flex items-center group-hover:translate-x-2 transition-transform">
+                    Visualizar Demo <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </span>
+            </a>
+
+            <!-- V4: Premium & Hospitality -->
+            <a href="V4/index.html" class="version-card bg-white p-8 rounded-3xl flex flex-col group">
+                <div class="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-100 transition-colors">✨</div>
+                <h3 class="text-xl font-bold mb-2">Modelo 04</h3>
+                <p class="text-sm font-semibold text-axis-blue uppercase tracking-widest mb-4">Premium Hospitality</p>
+                <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                    Focado no setor de hotelaria e luxo. Cores sóbrias e tipografia clássica para clientes de alto padrão.
+                </p>
+                <span class="text-sm font-bold flex items-center group-hover:translate-x-2 transition-transform">
+                    Visualizar Demo <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </span>
+            </a>
+
+            <!-- V5: Minimalismo Orgânico -->
+            <a href="V5/index.html" class="version-card bg-white p-8 rounded-3xl flex flex-col group">
+                <div class="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-orange-100 transition-colors">🌿</div>
+                <h3 class="text-xl font-bold mb-2">Modelo 05</h3>
+                <p class="text-sm font-semibold text-axis-blue uppercase tracking-widest mb-4">Orgânico & Fluído</p>
+                <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                    Design moderno com formas suaves e cores neutras. Transmite acessibilidade, modernidade e leveza.
+                </p>
+                <span class="text-sm font-bold flex items-center group-hover:translate-x-2 transition-transform">
+                    Visualizar Demo <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </span>
+            </a>
+
+            <!-- Placeholder para novo modelo -->
+            <div class="border-2 border-dashed border-gray-200 p-8 rounded-3xl flex flex-col items-center justify-center text-center opacity-50">
+                <div class="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center text-2xl mb-4 text-gray-400">+</div>
+                <p class="text-gray-400 font-bold uppercase tracking-widest text-xs">Novo Modelo</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-10">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-xs">
+            <p>© 2026 AXIS CORPORATE - Apresentação Comercial</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <span>Thiago Cremasco</span>
+                <span>(27) 99986-0122</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

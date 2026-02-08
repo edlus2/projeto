@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axis Corporate | Thiago Cremasco</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind for utilities -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --axis-blue: #4ebfff;
+            --axis-gray: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fcfcfc;
+            color: var(--axis-gray);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .border-thin {
+            border: 1px solid #e5e7eb;
+        }
+
+        .bg-axis {
+            background-color: var(--axis-blue);
+        }
+
+        .text-axis {
+            color: var(--axis-blue);
+        }
+
+        /* Animação de entrada */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover de imagem */
+        .img-container img {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .img-container:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #ccc; }
+        
+        .line-drawing {
+            height: 1px;
+            width: 0;
+            background: var(--axis-blue);
+            transition: width 1s ease-in-out;
+        }
+
+        .active .line-drawing {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação Minimalista -->
+    <nav class="fixed w-full z-50 mix-blend-difference py-8 px-6 md:px-12 flex justify-between items-center text-white">
+        <div class="flex flex-col group cursor-pointer">
+            <span class="text-2xl font-bold tracking-tighter leading-none">AXIS</span>
+            <span class="text-[10px] uppercase tracking-[0.4em] opacity-80">Corporate</span>
+        </div>
+        
+        <div class="flex items-center space-x-12">
+            <ul class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium">
+                <li><a href="#about" class="hover:text-[#4ebfff] transition">O Consultor</a></li>
+                <li><a href="#services" class="hover:text-[#4ebfff] transition">Expertise</a></li>
+                <li><a href="#contact" class="hover:text-[#4ebfff] transition">Contato</a></li>
+            </ul>
+            <button id="menu-toggle" class="p-2">
+                <div class="w-6 h-0.5 bg-white mb-1"></div>
+                <div class="w-6 h-0.5 bg-white"></div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section Assimétrico -->
+    <section class="min-h-screen flex flex-col md:flex-row">
+        <div class="w-full md:w-1/2 bg-[#121212] p-8 md:p-24 flex flex-col justify-end text-white">
+            <div class="reveal active">
+                <span class="text-axis font-bold uppercase tracking-widest text-xs mb-4 block">Axis Corporate &copy; 2026</span>
+                <h1 class="text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter mb-8">
+                    RESULTS <br>THROUGH <br><span class="text-axis">PRECISION.</span>
+                </h1>
+                <p class="max-w-xs text-sm text-gray-400 font-light leading-relaxed">
+                    Thiago Cremasco lidera a expansão de marcas com uma metodologia focada em resultados reais e tangíveis.
+                </p>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 relative bg-gray-200 overflow-hidden img-container">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Business Meeting" class="absolute inset-0 w-full h-full object-cover">
+        </div>
+    </section>
+
+    <!-- Seção Sobre (Thiago) - Layout Editorial -->
+    <section id="about" class="py-32 px-6 md:px-24 bg-white">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="md:col-span-4 reveal">
+                <div class="sticky top-32">
+                    <div class="aspect-[3/4] bg-gray-100 mb-6 overflow-hidden border-thin">
+                        <!-- Foto do Thiago aqui -->
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" 
+                             alt="Thiago Cremasco" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                    </div>
+                    <h3 class="text-2xl font-bold">Thiago Cremasco</h3>
+                    <p class="text-gray-400 text-sm italic">CEO & Partner na Axis Corporate</p>
+                </div>
+            </div>
+            
+            <div class="md:col-span-8 reveal">
+                <h2 class="text-xs uppercase tracking-[0.5em] text-axis font-bold mb-12">Filosofia de Trabalho</h2>
+                <p class="text-3xl md:text-5xl font-light leading-snug mb-12">
+                    "Não representamos apenas marcas. Construímos o <strong>elo estratégico</strong> necessário para que o mercado reconheça o seu valor real."
+                </p>
+                <div class="line-drawing mb-12"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-600 leading-relaxed">
+                    <p>
+                        Com base no Espírito Santo e atuação nacional, a Axis Corporate entende que o cenário corporativo moderno exige mais do que apenas presença; exige relevância. Thiago utiliza sua rede de contatos e expertise comercial para posicionar clientes no topo de suas categorias.
+                    </p>
+                    <p>
+                        Nosso foco é a entrega de valor contínua. Através de processos auditáveis e uma comunicação transparente, garantimos que cada parceria seja sólida e voltada para o crescimento sustentável.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços (Expertise) - Grid Minimalista -->
+    <section id="services" class="py-32 bg-[#121212] text-white">
+        <div class="px-6 md:px-24">
+            <h2 class="text-xs uppercase tracking-[0.5em] text-axis font-bold mb-20 text-center">Expertise Corporativa</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <div class="p-12 border-thin border-gray-800 hover:bg-axis/10 transition group reveal">
+                    <span class="text-4xl font-bold text-gray-700 group-hover:text-axis transition mb-8 block italic">01.</span>
+                    <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">Representação Comercial</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Intermediação de alto nível entre fabricantes e grandes grupos compradores, focada em contratos de longo prazo.</p>
+                </div>
+                <div class="p-12 border-thin border-gray-800 hover:bg-axis/10 transition group reveal">
+                    <span class="text-4xl font-bold text-gray-700 group-hover:text-axis transition mb-8 block italic">02.</span>
+                    <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">Inteligência de Mercado</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Mapeamento de oportunidades regionais (ES e Brasil) e análise preditiva de demanda corporativa.</p>
+                </div>
+                <div class="p-12 border-thin border-gray-800 hover:bg-axis/10 transition group reveal">
+                    <span class="text-4xl font-bold text-gray-700 group-hover:text-axis transition mb-8 block italic">03.</span>
+                    <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">Gestão de Key Accounts</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Atendimento personalizado para contas estratégicas, garantindo fidelização e aumento de market share.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato - Impacto Visual -->
+    <section id="contact" class="py-32 bg-white">
+        <div class="container mx-auto px-6 md:px-24">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-20">
+                <div class="reveal">
+                    <h2 class="text-8xl md:text-9xl font-bold tracking-tighter text-gray-100 absolute -z-10 -mt-12 select-none">HELLO.</h2>
+                    <h3 class="text-5xl font-bold mb-8 relative">Vamos iniciar uma <br><span class="text-axis">estratégia?</span></h3>
+                    <div class="space-y-4">
+                        <p class="text-xl font-medium tracking-tight">thiagocremasco3@gmail.com</p>
+                        <p class="text-xl font-medium tracking-tight">+55 27 99986 0122</p>
+                        <p class="text-gray-400 text-sm uppercase tracking-widest mt-8">Serra, Espírito Santo, Brasil</p>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 reveal">
+                    <form id="contact-form-v2" class="space-y-8">
+                        <div class="relative">
+                            <input type="text" placeholder="NOME" class="w-full py-4 bg-transparent border-b border-gray-200 focus:border-axis focus:outline-none text-sm transition font-medium">
+                        </div>
+                        <div class="relative">
+                            <input type="email" placeholder="E-MAIL" class="w-full py-4 bg-transparent border-b border-gray-200 focus:border-axis focus:outline-none text-sm transition font-medium">
+                        </div>
+                        <div class="relative">
+                            <textarea placeholder="PROJETO / MENSAGEM" rows="3" class="w-full py-4 bg-transparent border-b border-gray-200 focus:border-axis focus:outline-none text-sm transition font-medium"></textarea>
+                        </div>
+                        <button type="submit" class="group flex items-center space-x-4 text-sm font-bold uppercase tracking-[0.3em] py-4">
+                            <span>Enviar Mensagem</span>
+                            <div class="w-12 h-[1px] bg-axis group-hover:w-20 transition-all duration-500"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Minimal -->
+    <footer class="py-12 border-t border-gray-100">
+        <div class="px-6 md:px-24 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] text-gray-400">
+            <span>&copy; 2026 Axis Corporate. All Rights Reserved.</span>
+            <div class="flex space-x-8 mt-4 md:mt-0">
+                <a href="https://axiscorporate.com.br" class="hover:text-axis">WWW.AXISCORPORATE.COM.BR</a>
+                <a href="#" class="hover:text-axis">LINKEDIN</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notificações -->
+    <div id="notify" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] bg-axis text-white px-10 py-3 text-xs font-bold uppercase tracking-widest opacity-0 pointer-events-none transition-all duration-500">
+        Mensagem Recebida.
+    </div>
+
+    <script>
+        // Reveal animation on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    el.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Form Handling
+        const form = document.getElementById('contact-form-v2');
+        const notify = document.getElementById('notify');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            btn.style.opacity = '0.5';
+            btn.querySelector('span').innerText = 'Enviando...';
+
+            setTimeout(() => {
+                notify.classList.add('opacity-100');
+                btn.style.opacity = '1';
+                btn.querySelector('span').innerText = 'Enviar Mensagem';
+                form.reset();
+                
+                setTimeout(() => {
+                    notify.classList.remove('opacity-100');
+                }, 4000);
+            }, 1500);
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

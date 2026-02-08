@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axis Corporate | Thiago Cremasco</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700&family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
+    <!-- Tailwind for utilities -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --axis-blue: #4ebfff;
+            --soft-beige: #f9f7f2;
+            --clay: #e8e2d6;
+            --text-main: #2c2c2c;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--soft-beige);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            background: rgba(249, 247, 242, 0.7);
+        }
+
+        /* Organic Shapes */
+        .organic-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+
+        .btn-organic {
+            background-color: var(--text-main);
+            color: white;
+            border-radius: 100px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn-organic:hover {
+            transform: scale(1.05);
+            background-color: var(--axis-blue);
+            color: #000;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth marquee for brands */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 30s linear infinite;
+        }
+
+        .marquee-item {
+            display: inline-block;
+            margin: 0 4rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #b0aaa0;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .marquee-item:hover {
+            opacity: 1;
+            color: var(--axis-blue);
+        }
+
+        /* Floating effect */
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-[#4ebfff] organic-shape flex items-center justify-center font-bold text-white text-xs">AX</div>
+                <span class="font-heading font-extrabold text-2xl tracking-tighter">AXIS<span class="text-[#4ebfff]">.</span></span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-12 text-sm font-medium tracking-tight">
+                <a href="#vision" class="hover:text-[#4ebfff] transition">Visão</a>
+                <a href="#expertise" class="hover:text-[#4ebfff] transition">Expertise</a>
+                <a href="#partners" class="hover:text-[#4ebfff] transition">Parceiros</a>
+                <a href="#contact" class="btn-organic px-8 py-3 text-sm">Iniciar Parceria</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center px-6 pt-20">
+        <div class="container mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="fade-in visible">
+                <div class="inline-flex items-center space-x-2 bg-white/50 px-4 py-2 rounded-full border border-gray-100 mb-8 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Representação com Propósito</span>
+                </div>
+                <h1 class="font-heading text-6xl md:text-8xl font-extrabold leading-[0.95] tracking-tighter mb-10">
+                    O elo invisível <br>entre <span class="text-[#4ebfff]">estratégia</span> <br>e execução.
+                </h1>
+                <p class="text-xl text-gray-500 max-w-lg mb-12 font-light leading-relaxed">
+                    Thiago Cremasco lidera a Axis Corporate com uma filosofia de curadoria de mercado, conectando marcas premium aos canais ideais.
+                </p>
+                <div class="flex items-center space-x-8">
+                    <a href="#contact" class="btn-organic px-12 py-5 font-bold shadow-xl shadow-blue-500/10">Falar com Thiago</a>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-2xl">+20 anos</span>
+                        <span class="text-xs text-gray-400 uppercase tracking-widest">De Expertise</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative fade-in visible">
+                <div class="organic-shape bg-[#4ebfff]/10 absolute -inset-10 -z-10 floating"></div>
+                <div class="aspect-square overflow-hidden organic-shape shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=1200&q=80" alt="Meeting" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute bottom-10 -left-10 bg-white p-8 rounded-[2rem] shadow-xl max-w-xs border border-gray-50 hidden md:block">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Thiago">
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm">Thiago Cremasco</p>
+                            <p class="text-[10px] text-gray-400">DIRETOR ESTRATÉGICO</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500 italic">"Conectamos negócios através de relacionamentos reais e resultados auditáveis."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Brands -->
+    <section id="partners" class="py-20 bg-white/30 backdrop-blur-sm">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span class="marquee-item serif">Serra Grande Hotel</span>
+                <span class="marquee-item font-heading">GRUPO NEFFA</span>
+                <span class="marquee-item">Alexis Cunha Eventos</span>
+                <span class="marquee-item serif">Serra Grande Hotel</span>
+                <span class="marquee-item font-heading">GRUPO NEFFA</span>
+                <span class="marquee-item">Alexis Cunha Eventos</span>
+            </div>
+            <!-- Duplicate for loop -->
+            <div class="marquee-content">
+                <span class="marquee-item serif">Serra Grande Hotel</span>
+                <span class="marquee-item font-heading">GRUPO NEFFA</span>
+                <span class="marquee-item">Alexis Cunha Eventos</span>
+                <span class="marquee-item serif">Serra Grande Hotel</span>
+                <span class="marquee-item font-heading">GRUPO NEFFA</span>
+                <span class="marquee-item">Alexis Cunha Eventos</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-32 px-6">
+        <div class="container mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-20 fade-in">
+                <h2 class="font-heading text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">Onde a Experiência <br>Encontra a Inovação.</h2>
+                <p class="text-gray-500 font-light">A Axis Corporate atua em três pilares fundamentais, garantindo que sua marca seja representada com a dignidade que merece.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white/50 p-12 rounded-[3rem] border border-white hover:bg-white transition-all duration-500 group fade-in">
+                    <div class="w-16 h-16 bg-[#4ebfff]/10 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:scale-110 transition-transform">🛎️</div>
+                    <h3 class="font-bold text-2xl mb-4">Hospitalidade</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Representação focada em grandes grupos hoteleiros e serviços de hospitalidade de alto giro.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white/50 p-12 rounded-[3rem] border border-white hover:bg-white transition-all duration-500 group fade-in" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 bg-[#4ebfff]/10 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:scale-110 transition-transform">🍽️</div>
+                    <h3 class="font-bold text-2xl mb-4">Alimentação</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Gestão estratégica para o setor de alimentação corporativa e serviços de catering em larga escala.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white/50 p-12 rounded-[3rem] border border-white hover:bg-white transition-all duration-500 group fade-in" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 bg-[#4ebfff]/10 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:scale-110 transition-transform">🎭</div>
+                    <h3 class="font-bold text-2xl mb-4">Eventos</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Soluções integradas para o mercado de eventos, conectando fornecedores aos maiores palcos do país.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 px-6">
+        <div class="container mx-auto">
+            <div class="bg-white rounded-[4rem] p-12 md:p-24 shadow-2xl shadow-gray-200/50 flex flex-col lg:flex-row gap-20 relative overflow-hidden">
+                <div class="organic-shape bg-blue-50 w-96 h-96 absolute -top-48 -right-48 -z-10"></div>
+                
+                <div class="lg:w-1/2 fade-in">
+                    <h2 class="font-heading text-5xl md:text-7xl font-extrabold mb-10 tracking-tighter">O Próximo <br>Capítulo <span class="text-[#4ebfff]">começa aqui.</span></h2>
+                    <p class="text-gray-500 mb-12 text-lg">Seja para expandir sua marca ou otimizar seus canais de venda no Espírito Santo e Sudeste, Thiago Cremasco está pronto para colaborar.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-6 group cursor-pointer">
+                            <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center group-hover:bg-[#4ebfff]/10 transition">📞</div>
+                            <div>
+                                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">WhatsApp Direct</p>
+                                <p class="font-bold">+55 27 99986 0122</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-6 group cursor-pointer">
+                            <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center group-hover:bg-[#4ebfff]/10 transition">✉️</div>
+                            <div>
+                                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Email Corporativo</p>
+                                <p class="font-bold">thiagocremasco3@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 fade-in">
+                    <form id="organic-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="text" placeholder="Seu Nome" class="w-full bg-gray-50 px-8 py-4 rounded-3xl border-none focus:ring-2 focus:ring-[#4ebfff] transition text-sm">
+                            <input type="email" placeholder="Seu E-mail" class="w-full bg-gray-50 px-8 py-4 rounded-3xl border-none focus:ring-2 focus:ring-[#4ebfff] transition text-sm">
+                        </div>
+                        <textarea rows="4" placeholder="Como podemos ajudar o seu negócio?" class="w-full bg-gray-50 px-8 py-4 rounded-[2rem] border-none focus:ring-2 focus:ring-[#4ebfff] transition text-sm"></textarea>
+                        <button type="submit" class="btn-organic w-full py-5 text-lg font-bold shadow-xl shadow-black/5">Solicitar Consultoria</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 border-t border-gray-100">
+        <div class="container mx-auto text-center">
+            <div class="font-heading font-extrabold text-3xl mb-8 tracking-tighter">AXIS<span class="text-[#4ebfff]">.</span></div>
+            <div class="flex justify-center space-x-12 text-[10px] uppercase font-bold tracking-[0.4em] text-gray-400 mb-12">
+                <a href="#vision" class="hover:text-black transition">Visão</a>
+                <a href="#expertise" class="hover:text-black transition">Expertise</a>
+                <a href="#contact" class="hover:text-black transition">Contato</a>
+            </div>
+            <p class="text-xs text-gray-400 font-medium">© 2026 AXIS CORPORATE / THIAGO CREMASCO. TODOS OS DIREITOS RESERVADOS.</p>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div id="organic-notify" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-black text-white px-12 py-4 rounded-full font-bold shadow-2xl opacity-0 pointer-events-none transition-all duration-500 z-[100] text-sm tracking-wide">
+        Mensagem Recebida. Retornaremos em breve.
+    </div>
+
+    <script>
+        // Reveal on scroll logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Form Logic
+        const form = document.getElementById('organic-form');
+        const notify = document.getElementById('organic-notify');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "PROCESSANDO...";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                notify.classList.add('opacity-100');
+                btn.innerText = originalText;
+                btn.disabled = false;
+                form.reset();
+                
+                setTimeout(() => {
+                    notify.classList.remove('opacity-100');
+                }, 4000);
+            }, 1500);
+        });
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

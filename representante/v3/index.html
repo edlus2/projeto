@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axis Corporate | Tech Strategy & Business Growth</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <!-- Tailwind for utilities -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --axis-blue: #4ebfff;
+            --bg-dark: #0a0a0c;
+            --card-bg: #16161a;
+            --card-border: #232329;
+            --accent-glow: rgba(78, 191, 255, 0.15);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Bento Grid Style */
+        .bento-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 28px;
+            padding: 2rem;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bento-card:hover {
+            border-color: var(--axis-blue);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -15px rgba(78, 191, 255, 0.2);
+        }
+
+        .glow-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at var(--x) var(--y), var(--accent-glow), transparent 40%);
+            pointer-events: none;
+        }
+
+        /* Background Grid */
+        .grid-bg {
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #fff 30%, var(--axis-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(16px);
+            background: rgba(10, 10, 12, 0.85);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--card-border); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--axis-blue); }
+
+        /* Step Line */
+        .step-line::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: linear-gradient(transparent, var(--axis-blue), transparent);
+        }
+    </style>
+</head>
+<body class="grid-bg">
+
+    <!-- Navegação High-Tech -->
+    <nav class="fixed w-full z-50 nav-blur py-5">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-3 group cursor-pointer">
+                <div class="w-10 h-10 bg-[#4ebfff] rounded-xl rotate-12 flex items-center justify-center font-bold text-black text-sm transition-transform group-hover:rotate-0">AX</div>
+                <div class="flex flex-col">
+                    <span class="font-bold tracking-tighter text-2xl leading-none">AXIS<span class="text-[#4ebfff]">.</span></span>
+                    <span class="text-[8px] mono uppercase tracking-[0.3em] text-gray-500">Corporate Strategy</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-10 text-xs uppercase tracking-widest font-semibold text-gray-400">
+                <a href="#inicio" class="hover:text-[#4ebfff] transition">Início</a>
+                <a href="#metodo" class="hover:text-[#4ebfff] transition">Método</a>
+                <a href="#setores" class="hover:text-[#4ebfff] transition">Mercados</a>
+                <a href="#contato" class="bg-white text-black px-6 py-2.5 rounded-full hover:bg-[#4ebfff] transition-all hover:scale-105 active:scale-95">Consultoria Online</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 pt-32 space-y-24 pb-24">
+        
+        <!-- SECTION 1: Bento Hero & Profile -->
+        <section id="inicio" class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-6 gap-6 h-auto md:h-[1100px]">
+            
+            <!-- Hero Card -->
+            <div class="md:col-span-3 md:row-span-4 bento-card flex flex-col justify-end relative group">
+                <div class="absolute top-8 left-8 flex space-x-2">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span class="mono text-[10px] text-gray-500">STRATEGIC_PROTOCOL_v4.0</span>
+                </div>
+                <div class="relative z-10">
+                    <h1 class="text-6xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tighter">
+                        PRECISÃO QUE <br><span class="text-gradient">GERA VALOR.</span>
+                    </h1>
+                    <p class="text-gray-400 max-w-xl text-xl mb-10 leading-relaxed font-light">
+                        Transformamos a complexidade comercial em protocolos de crescimento. Thiago Cremasco aplica inteligência de dados na representação corporativa.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-[#4ebfff] text-black font-bold px-10 py-4 rounded-2xl hover:bg-white transition-colors">Ver Dashboard de Resultados</button>
+                        <div class="flex items-center px-6 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-md">
+                            <span class="text-sm font-semibold text-gray-300 tracking-wide">24/7 Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="md:col-span-1 md:row-span-3 bento-card items-center text-center justify-center bg-gradient-to-b from-[#16161a] to-[#0a0a0c]">
+                <div class="relative mb-8">
+                    <div class="w-36 h-36 rounded-[2.5rem] overflow-hidden border-2 border-[#4ebfff]/20 p-1.5 rotate-3 hover:rotate-0 transition-transform duration-500 shadow-2xl shadow-blue-500/10">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" alt="Thiago" class="w-full h-full object-cover rounded-[2rem]">
+                    </div>
+                </div>
+                <h2 class="text-2xl font-bold mb-1 tracking-tight">Thiago Cremasco</h2>
+                <p class="text-[#4ebfff] text-xs mono uppercase tracking-[0.2em] mb-8 opacity-70">Chief Executive / Partner</p>
+                <div class="w-full space-y-2">
+                    <div class="bg-white/5 p-3 rounded-2xl border border-white/5 text-left flex items-center justify-between group cursor-help">
+                        <span class="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Expertise</span>
+                        <span class="text-xs text-blue-300 mono group-hover:text-white transition">Key Accounts</span>
+                    </div>
+                    <div class="bg-white/5 p-3 rounded-2xl border border-white/5 text-left flex items-center justify-between group cursor-help">
+                        <span class="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Região</span>
+                        <span class="text-xs text-blue-300 mono group-hover:text-white transition">Sudeste BR</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Card 1 -->
+            <div class="md:col-span-1 md:row-span-3 bento-card justify-center">
+                <span class="text-6xl font-black text-[#4ebfff] mb-2">27</span>
+                <p class="text-sm font-bold uppercase tracking-widest text-gray-300">DDD Especialista</p>
+                <p class="text-xs text-gray-500 mt-4 leading-relaxed">Conhecimento profundo do mercado capixaba e suas nuances tributárias e logísticas.</p>
+            </div>
+
+            <!-- Secondary Services Card -->
+            <div class="md:col-span-2 md:row-span-2 bento-card bg-gradient-to-r from-[#16161a] to-transparent">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 italic tracking-tighter">DATA-DRIVEN <br>REPRESENTATION</h3>
+                        <p class="text-gray-400 text-sm max-w-xs">Relatórios em tempo real e análise de performance para cada SKU no portfólio.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="w-8 h-12 bg-[#4ebfff]/20 rounded-md animate-pulse"></div>
+                        <div class="w-8 h-16 bg-[#4ebfff]/40 rounded-md animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: O Método (The Flow) -->
+        <section id="metodo" class="space-y-12">
+            <div class="text-center">
+                <h2 class="mono text-[#4ebfff] text-sm tracking-[0.4em] mb-4 uppercase font-bold">Protocolo Axis</h2>
+                <h3 class="text-4xl md:text-6xl font-black tracking-tighter">COMO ESCALAMOS SEU NEGÓCIO</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bento-card relative group p-10">
+                    <span class="absolute top-8 right-10 text-8xl font-black text-white opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">01</span>
+                    <div class="w-14 h-14 bg-[#4ebfff] rounded-2xl flex items-center justify-center text-black mb-8 text-2xl">🔍</div>
+                    <h4 class="text-2xl font-bold mb-4 tracking-tight">Diagnóstico Estratégico</h4>
+                    <p class="text-gray-500 leading-relaxed">Analisamos seu portfólio e identificamos os gaps de mercado onde sua marca pode dominar rapidamente.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bento-card relative group p-10 border-blue-500/20">
+                    <span class="absolute top-8 right-10 text-8xl font-black text-white opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">02</span>
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-black mb-8 text-2xl">⚡</div>
+                    <h4 class="text-2xl font-bold mb-4 tracking-tight">Implementação de Canais</h4>
+                    <p class="text-gray-500 leading-relaxed">Ativação de Key Accounts e rede de distribuição com foco em volume e manutenção de margem.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bento-card relative group p-10">
+                    <span class="absolute top-8 right-10 text-8xl font-black text-white opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">03</span>
+                    <div class="w-14 h-14 bg-[#4ebfff] rounded-2xl flex items-center justify-center text-black mb-8 text-2xl">📊</div>
+                    <h4 class="text-2xl font-bold mb-4 tracking-tight">Gestão & Otimização</h4>
+                    <p class="text-gray-500 leading-relaxed">Monitoramento constante via dashboard, ajustes de estoque e campanhas de sell-out para garantir o giro.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Setores de Atuação -->
+        <section id="setores" class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+            <div class="md:col-span-4 bento-card justify-center bg-[#4ebfff] text-black border-none">
+                <h3 class="text-4xl font-black leading-none tracking-tighter mb-6 uppercase">MERCADOS <br>EM QUE <br>ATUAMOS.</h3>
+                <p class="font-bold opacity-80 leading-relaxed">Especialização em setores que exigem alta complexidade técnica e logística.</p>
+            </div>
+            
+            <div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bento-card group cursor-pointer hover:bg-white/5">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="text-2xl">🏗️</span>
+                        <h4 class="text-xl font-bold tracking-tight">Construção & Infraestrutura</h4>
+                    </div>
+                    <p class="text-gray-500 text-sm">Representação de materiais pesados e tecnologias aplicadas ao setor de engenharia civil de larga escala.</p>
+                </div>
+                <div class="bento-card group cursor-pointer hover:bg-white/5">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="text-2xl">⚙️</span>
+                        <h4 class="text-xl font-bold tracking-tight">Industrial & Manufatura</h4>
+                    </div>
+                    <p class="text-gray-500 text-sm">Componentes críticos e automação para processos fabris que não podem parar por falta de suprimento.</p>
+                </div>
+                <div class="bento-card group cursor-pointer hover:bg-white/5">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="text-2xl">📦</span>
+                        <h4 class="text-xl font-bold tracking-tight">Bens de Consumo (FMCG)</h4>
+                    </div>
+                    <p class="text-gray-500 text-sm">Gestão de giro e posicionamento em gôndola para marcas que buscam escala no varejo regional.</p>
+                </div>
+                <div class="bento-card group cursor-pointer hover:bg-white/5 border-dashed">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="text-2xl">➕</span>
+                        <h4 class="text-xl font-bold tracking-tight italic">Seu Próximo Projeto</h4>
+                    </div>
+                    <p class="text-gray-500 text-sm">Estamos abertos a novos desafios que exijam representação ética e foco absoluto em metas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: FAQ / Perguntas Estratégicas -->
+        <section class="py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-5xl font-black tracking-tighter mb-8 leading-none">O QUE VOCÊ PRECISA <br><span class="text-[#4ebfff]">SABER.</span></h3>
+                    <p class="text-gray-500 max-w-md">Esclarecemos as dúvidas mais comuns de parceiros que buscam expandir sua operação através da Axis Corporate.</p>
+                </div>
+                <div class="space-y-6">
+                    <div class="p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-[#4ebfff]/30 transition">
+                        <h5 class="font-bold text-lg mb-2">Quais regiões a Axis atende?</h5>
+                        <p class="text-gray-500 text-sm">Nossa base estratégica é o Espírito Santo (DDD 27), mas possuímos rede logística e comercial para atender todo o Sudeste brasileiro.</p>
+                    </div>
+                    <div class="p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-[#4ebfff]/30 transition">
+                        <h5 class="font-bold text-lg mb-2">Como é feito o controle de vendas?</h5>
+                        <p class="text-gray-500 text-sm">Utilizamos um ERP proprietário integrado que fornece aos nossos clientes transparência total sobre pedidos, entregas e sell-out.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Contact Hub -->
+        <section id="contato" class="bento-card flex-row flex-wrap bg-[#16161a] p-16 border-blue-500/10 justify-between items-center overflow-visible">
+            <div class="max-w-xl mb-12 md:mb-0">
+                <h3 class="text-5xl font-black mb-6 tracking-tight italic">START THE <span class="text-[#4ebfff]">ENGINE.</span></h3>
+                <p class="text-gray-400 text-xl leading-relaxed mb-8">Disponível para reuniões estratégicas de expansão comercial. Thiago Cremasco responderá diretamente.</p>
+                <div class="flex space-x-8">
+                    <div class="flex flex-col">
+                        <span class="text-[10px] text-[#4ebfff] uppercase font-bold tracking-widest mb-1">WhatsApp Direct</span>
+                        <span class="text-xl font-bold">+55 27 99986-0122</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-[10px] text-[#4ebfff] uppercase font-bold tracking-widest mb-1">Office Location</span>
+                        <span class="text-xl font-bold">Vitória, ES</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-auto">
+                <a href="mailto:thiagocremasco3@gmail.com" class="group relative flex items-center justify-center">
+                    <div class="absolute inset-0 bg-blue-500 blur-3xl opacity-20 group-hover:opacity-40 transition"></div>
+                    <div class="relative bg-white text-black px-12 py-6 rounded-[2rem] font-black text-2xl transition group-hover:scale-105 active:scale-95 shadow-2xl">
+                        ENVIAR PROPOSTA
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Tech Footer -->
+    <footer class="container mx-auto px-6 py-20 border-t border-white/5">
+        <div class="flex flex-col md:flex-row justify-between gap-12">
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center font-bold text-white text-xs">AX</div>
+                    <span class="font-bold tracking-tighter text-xl">AXIS<span class="text-gray-500">.</span></span>
+                </div>
+                <p class="text-gray-500 max-w-xs text-sm">Protocolos estratégicos e execução comercial de alto nível. Elevando o padrão de representação corporativa desde 2000.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+                <div>
+                    <h5 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Sitemap</h5>
+                    <ul class="space-y-3 text-gray-500 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Início</a></li>
+                        <li><a href="#" class="hover:text-white transition">Soluções</a></li>
+                        <li><a href="#" class="hover:text-white transition">Insights</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Compliance</h5>
+                    <ul class="space-y-3 text-gray-500 text-sm">
+                        <li><a href="#" class="hover:text-white transition">LGPD</a></li>
+                        <li><a href="#" class="hover:text-white transition">Termos</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <h5 class="text-white font-bold text-xs uppercase tracking-widest mb-6">System Status</h5>
+                    <div class="flex items-center space-x-2 text-green-500 mono text-[10px]">
+                        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                        <span>ALL_SYSTEMS_OPERATIONAL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <span class="text-gray-600 text-[10px] mono uppercase tracking-widest">&copy; 2026 AXIS CORPORATE // DESIGNED BY GENIUS</span>
+            <div class="flex space-x-6">
+                <a href="https://axiscorporate.com.br" class="text-gray-600 hover:text-[#4ebfff] transition text-xs mono">WWW.AXISCORPORATE.COM.BR</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Interactive Glow Effect for Cards
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--x', `${x}px`);
+                card.style.setProperty('--y', `${y}px`);
+                
+                if (!card.querySelector('.glow-effect')) {
+                    const glow = document.createElement('div');
+                    glow.className = 'glow-effect';
+                    card.appendChild(glow);
+                }
+            });
+        });
+
+        // Simple Reveal on Scroll
+        const revealSections = () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => {
+                const top = sec.getBoundingClientRect().top;
+                if (top < window.innerHeight * 0.8) {
+                    sec.style.opacity = '1';
+                    sec.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Initialize sections
+        document.querySelectorAll('section').forEach(sec => {
+            sec.style.opacity = '0';
+            sec.style.transform = 'translateY(30px)';
+            sec.style.transition = 'all 0.8s ease-out';
+        });
+
+        window.addEventListener('scroll', revealSections);
+        window.addEventListener('load', revealSections);
+    </script>
+</body>
+</html>

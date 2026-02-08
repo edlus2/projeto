@@ -1,0 +1,102 @@
+:root {
+    --primary-blue: #1a365d;
+    --text-dark: #333;
+    --bg-light: #f4f7f6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x400');
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    max-width: 600px;
+}
+
+/* About Section */
+.about {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+.profile-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+/* Services */
+.services {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+}
+
+.service-card {
+    background: var(--bg-light);
+    padding: 30px;
+    width: 30%;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
